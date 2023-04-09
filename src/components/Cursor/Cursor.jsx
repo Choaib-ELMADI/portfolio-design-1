@@ -13,13 +13,13 @@ const Cursor = () => {
           setPosition({ x: e.clientX, y: e.clientY });
         };
         document.addEventListener('mousemove', handleMouseMove);
-        document.addEventListener('mouseenter', setHidden(false));
-        document.addEventListener('mouseleave', setHidden(true));
+        document.addEventListener('mouseenter', () => setHidden(false));
+        document.addEventListener('mouseleave', () => setHidden(true));
     
         return () => {
           document.removeEventListener('mousemove', handleMouseMove);
-          document.removeEventListener('mouseenter', setHidden(false));
-          document.removeEventListener('mouseleave', setHidden(true));
+          document.removeEventListener('mouseenter', () => setHidden(false));
+          document.removeEventListener('mouseleave', () => setHidden(true));
         };
     }, []);
 
