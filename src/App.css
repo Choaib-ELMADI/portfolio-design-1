@@ -7,5 +7,8 @@
 
 .app__main-content {
     flex: .5;
-    /* background: blue; */
+}
+
+::selection {
+    background: transparent;
 }
