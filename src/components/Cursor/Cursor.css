@@ -1,0 +1,22 @@
+.app__cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid var(--main__color);
+    display: grid;
+    place-items: center;
+    z-index: 4;
+}
+
+.app__cursor.hidden {
+    display: none;
+}
+
+.app__cursor .cursor-point {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--main__color);
+}

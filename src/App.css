@@ -1,0 +1,11 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__main-content {
+    flex: .5;
+    /* background: blue; */
+}
