@@ -3,16 +3,21 @@ import { FiSettings } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 
+import { useStateContext } from '../../StateContext/StateContext';
 import './Settings.css';
 const colors = ["yellow", "blue", "red", "orange", "lightseagreen", "white", "greenyellow", "green"];
 const scrollBars = ["bar", "progress", "default"];
 const hoverEffects = ["tech", "abstract", "bricks", "waves"];
 
+
+
 const Settings = () => {
     const [openSettings, setOpenSettings] = useState(false);
-    const [selectedColor, setSelectedColor] = useState(null);
-    const [selectedBar, setSelectedBar] = useState("default");
-    const [selectedEffect, setSelectedEffect] = useState("tech");
+    const { 
+        selectedColor, setSelectedColor, 
+        selectedBar, setSelectedBar, 
+        selectedEffect, setSelectedEffect 
+    } = useStateContext();
 
     return (
         <>

@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
   return (
     <div className='app'>
-      {/* <Cursor /> */}
+      <Cursor />
       <Scroll />
       <Settings />
       <LeftCard />
