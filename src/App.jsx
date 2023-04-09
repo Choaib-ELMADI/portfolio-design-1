@@ -5,7 +5,8 @@ import {
   Introduction, 
   Cursor, 
   Scroll,
-  About
+  About,
+  Settings,
 } from './components';
 import './App.css';
 
@@ -14,8 +15,9 @@ import './App.css';
 const App = () => {
   return (
     <div className='app'>
-      <Cursor />
+      {/* <Cursor /> */}
       <Scroll />
+      <Settings />
       <LeftCard />
       <div className='app__main-content'>
         <Introduction />
