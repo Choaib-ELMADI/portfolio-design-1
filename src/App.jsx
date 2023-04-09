@@ -4,7 +4,8 @@ import {
   LeftCard, 
   Introduction, 
   Cursor, 
-  Scroll 
+  Scroll,
+  About
 } from './components';
 import './App.css';
 
@@ -18,6 +19,7 @@ const App = () => {
       <LeftCard />
       <div className='app__main-content'>
         <Introduction />
+        <About />
       </div>
     </div>
   );

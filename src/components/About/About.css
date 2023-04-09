@@ -1,0 +1,34 @@
+.app__about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    gap: 2.5rem;
+}
+
+.app__about h3 {
+    letter-spacing: 2px;
+}
+
+.app__about .first {
+    margin-left: 2rem;
+    font-size: 34px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 470px;
+}
+
+.app__about .bar {
+    width: 40px;
+    height: 1.5px;
+    background: var(--white);
+}
+
+.app__about .second {
+    font-size: 22px;
+    color: var(--white__2);
+    width: 100%;
+    max-width: 470px;
+}
