@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Teko:wght@300&display=swap');
+
 :root {
     --main__color: orangered;
 
-    --white__1:    #e4e4e40e;
-    --white__2:    #e4e4e449;
-    --white__3:    #e4e4e476;
+    --white__1:    #e4e4e425;
+    --white__2:    #e4e4e450;
+    --white__3:    #e4e4e480;
+    --white:       #e4e4e4;
 
     --background:  #212121;
 }
@@ -12,6 +15,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
 }
 
 body {

@@ -1,48 +1,70 @@
 .app__leftcard {
-    flex: .5;
-    /* background: red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     perspective: 1000px;
-    /* perspective-origin: 200% -100%; */
+    flex: .5;
+    position: sticky;
+    top: 0;
 }
 
 .app__leftcard .image-container {
+    width: 100%;
     position: relative;
-    width: max-content;
     transform: perspective(5rem) rotate3d(0, 0.1, 0, .03rad);
+    display: grid;
+    place-items: center;
 }
 
 .app__leftcard .image-container .border {
     position: absolute;
-    width: 360px;
-    height: 440px;
-    border-width: 2px;
+    width: 70%;
+    max-width: 360px;
+    aspect-ratio: .8;
+    border-width: 1px;
     border-style: solid;
     z-index: -1;
 }
 
 .app__leftcard .image-container .border-1 {
-    margin-left: -48px;
-    margin-top: 48px;
+    margin-left: -12%;
+    margin-top: 12%;
     border-color: var(--white__1);
 }
 .app__leftcard .image-container .border-2 {
-    margin-left: -32px;
-    margin-top: 32px;
+    margin-left: -8%;
+    margin-top: 8%;
     border-color: var(--white__2);
 
 }
 .app__leftcard .image-container .border-3 {
-    margin-left: -16px;
-    margin-top: 16px;
+    margin-left: -4%;
+    margin-top: 4%;
     border-color: var(--white__3);
 }
 
 .app__leftcard .image-container img {
-    width: 360px;
-    height: 440px;
+    width: 70%;
+    max-width: 360px;
+    aspect-ratio: .8;
     object-fit: cover;
     z-index: 2;
+}
+
+.app__leftcard .image-container .title {
+    position: absolute;
+    bottom: 2rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    z-index: 3;
+}
+
+.app__leftcard .image-container .title span {
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    width: 50%;
+    height: 2px;
+    background: var(--white);
 }
