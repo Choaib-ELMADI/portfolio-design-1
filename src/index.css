@@ -1,9 +1,19 @@
 :root {
     --main__color: orangered;
+
+    --white__1:    #e4e4e40e;
+    --white__2:    #e4e4e449;
+    --white__3:    #e4e4e476;
+
+    --background:  #212121;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
 }

@@ -1,0 +1,48 @@
+.app__leftcard {
+    flex: .5;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    /* perspective-origin: 200% -100%; */
+}
+
+.app__leftcard .image-container {
+    position: relative;
+    width: max-content;
+    transform: perspective(5rem) rotate3d(0, 0.1, 0, .03rad);
+}
+
+.app__leftcard .image-container .border {
+    position: absolute;
+    width: 360px;
+    height: 440px;
+    border-width: 2px;
+    border-style: solid;
+    z-index: -1;
+}
+
+.app__leftcard .image-container .border-1 {
+    margin-left: -48px;
+    margin-top: 48px;
+    border-color: var(--white__1);
+}
+.app__leftcard .image-container .border-2 {
+    margin-left: -32px;
+    margin-top: 32px;
+    border-color: var(--white__2);
+
+}
+.app__leftcard .image-container .border-3 {
+    margin-left: -16px;
+    margin-top: 16px;
+    border-color: var(--white__3);
+}
+
+.app__leftcard .image-container img {
+    width: 360px;
+    height: 440px;
+    object-fit: cover;
+    z-index: 2;
+}
