@@ -1,0 +1,39 @@
+.app__scroll {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.app__scroll.hidden {
+    display: none;
+}
+
+.app__scroll .bar {
+    width: 2px;
+    height: 50px;
+    background: rgb(83, 81, 81);
+}
+
+.app__scroll .bar .progress {
+    width: 100%;
+    background: var(--white);
+    animation: animate 1.5s infinite ease-out;
+}
+
+.app__scroll h5 {
+    transform: rotateZ(90deg);
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 1.8px;
+}
+
+@keyframes animate {
+    0% { height: 0; }
+    90% { height: 100%; }
+    100% { height: 0; }
+}
