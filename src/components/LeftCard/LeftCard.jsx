@@ -12,12 +12,14 @@ const LeftCard = () => {
         <div className='border border-1' />
         <div className='border border-2' />
         <div className='border border-3' />
-        <img src={ images.profile } alt="Choaib-ELMADI" />
-        <div className='title'>
-          <h2>Choaib ELMADI</h2>
-          <span />
+        <div className="profile">
+          <img src={ images.profile } alt="Choaib-ELMADI" />
+          <div className='title'>
+            <h2>Choaib ELMADI</h2>
+            <span />
+          </div>
         </div>
-      </div>
+        </div>
     </div>
   );
 };

@@ -7,10 +7,12 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    transition: .2s;
 }
 
 .app__scroll.hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .app__scroll .bar {

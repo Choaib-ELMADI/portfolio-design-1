@@ -17,7 +17,7 @@
     font-weight: lighter;
     letter-spacing: 2px;
     width: 100%;
-    max-width: 470px;
+    max-width: 480px;
 }
 
 .app__about .bar {
@@ -30,5 +30,6 @@
     font-size: 22px;
     color: var(--white__2);
     width: 100%;
-    max-width: 470px;
+    max-width: 480px;
+    font-family: var(--font__2);
 }
