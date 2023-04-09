@@ -9,15 +9,24 @@
     display: grid;
     place-items: center;
     z-index: 12;
+    transition: width .2s, height .2s, border-width .15s;
     pointer-events: none;
 }
 
 .app__cursor.hidden {
-    display: none;
+    width: 0;
+    height: 0;
+    border-width: 0;
+}
+
+.app__cursor.hidden .cursor-point {
+    width: 0;
+    height: 0;
 }
 
 .app__cursor .cursor-point {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    transition: width .2s, height .2s;
 }
