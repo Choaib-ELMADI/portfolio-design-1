@@ -13,6 +13,7 @@ const hoverEffects = ["tech", "abstract", "bricks", "waves"];
 
 const Settings = () => {
     const [openSettings, setOpenSettings] = useState(false);
+    const [color, setColor] = useState("#e4e4e4");
     const { 
         selectedColor, setSelectedColor, 
         selectedBar, setSelectedBar, 
@@ -23,9 +24,11 @@ const Settings = () => {
         <>
             <div
                 className={ openSettings ? 'settings-icon out' : 'settings-icon'}
-                onClick={ () => setOpenSettings(!openSettings) } 
+                onClick={ () => setOpenSettings(!openSettings) }
+                onPointerEnter={ () => setColor(selectedColor) }
+                onPointerLeave={ () => setColor("#e4e4e4") }
             >
-                <FiSettings size={ 20 } />
+                <FiSettings color={ color } size={ 20 } />
             </div>
             {
                 openSettings && 
@@ -41,9 +44,14 @@ const Settings = () => {
                 >
                     <div
                         className='close-settings'
-                        onClick={ () => setOpenSettings(false) } 
+                        onClick={ () => {
+                            setOpenSettings(false);
+                            setColor("#e4e4e4");
+                        }}
+                        onPointerEnter={ () => setColor(selectedColor) }
+                        onPointerLeave={ () => setColor("#e4e4e4") }
                     >
-                        <IoClose size={ 26 } />
+                        <IoClose color={ color } size={ 26 } />
                     </div>
                     <div className='app__settings-params'>
                         <h2>Configuration</h2>

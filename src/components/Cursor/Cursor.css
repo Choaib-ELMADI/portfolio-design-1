@@ -4,10 +4,12 @@
     height: 40px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 1px solid var(--main__color);
+    border-width: 1px;
+    border-style: solid;
     display: grid;
     place-items: center;
-    z-index: 4;
+    z-index: 12;
+    pointer-events: none;
 }
 
 .app__cursor.hidden {
@@ -18,5 +20,4 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--main__color);
 }

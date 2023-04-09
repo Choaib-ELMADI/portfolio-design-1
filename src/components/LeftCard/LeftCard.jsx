@@ -13,7 +13,7 @@ const LeftCard = () => {
         <div className='border border-2' />
         <div className='border border-3' />
         <div className="profile">
-          <img src={ images.profile } alt="Choaib-ELMADI" />
+          <img src={ images.profile } draggable={ false } alt="Choaib-ELMADI" />
           <div className='title'>
             <h2>Choaib ELMADI</h2>
             <span />

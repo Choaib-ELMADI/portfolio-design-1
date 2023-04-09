@@ -4,7 +4,7 @@ const Context = createContext();
 
 
 export const StateContext = ({ children }) => {
-    const [selectedColor, setSelectedColor] = useState(null);
+    const [selectedColor, setSelectedColor] = useState("orange");
     const [selectedBar, setSelectedBar] = useState("default");
     const [selectedEffect, setSelectedEffect] = useState("tech");
 

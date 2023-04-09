@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 import './Cursor.css';
+import { useStateContext } from '../../StateContext/StateContext';
 
 
 
 const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y:0 });
     const [hidden, setHidden] = useState(false);
+    const { selectedColor } = useStateContext();
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -29,9 +31,10 @@ const Cursor = () => {
             style={{
                 left: `${ position.x }px`,
                 top: `${ position.y }px`,
+                borderColor: selectedColor,
             }}
         >
-            <div className='cursor-point' />
+            <div className='cursor-point' style={{ background: selectedColor }} />
         </div>
     );
 };
