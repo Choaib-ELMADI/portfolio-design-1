@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.app__scrollbar {
+    width: 3px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: gray;
+    z-index: 999;
+}
+
+.app__scrollbar .progress-bar {
+    background: red;
+    width: inherit;
+}
