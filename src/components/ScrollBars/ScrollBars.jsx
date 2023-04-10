@@ -8,9 +8,9 @@ const noneBarStyles = {
         display: 'none',
     },
 };
-const indicatorBatStyles = {
+const indicatorBarStyles = {
     parent: {
-        width: '8px',
+        width: '4px',
         height: '100vh',
     },
 };
@@ -43,7 +43,7 @@ const ScrollBars = () => {
                 setStyles(rightBarStyles);
                 break;
             case "indicator":
-                setStyles(indicatorBatStyles);
+                setStyles(indicatorBarStyles);
                 break;
             default:
                 setStyles(noneBarStyles);
@@ -75,7 +75,7 @@ const ScrollBars = () => {
                 height: selectedBar === "right bar" ? `${ height }%` : selectedBar === "indicator" ? '60px' : 'inherit',
                 position: selectedBar === "indicator" ? 'absolute' : '',
                 top: selectedBar === "indicator" ? `clamp(0%, ${ height }%, calc(100% - 60px))` : '',
-                borderRadius: selectedBar === "indicator" ? '6px' : '',
+                transition: selectedBar === "indicator" ? `0s linear` : '',
                 background: selectedColor,
             }}
         ></div>
