@@ -7,9 +7,9 @@
     top: 0;
     right: 0;
     background: gray;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
-.app__scrollbar .progress-bar {
+/* .app__scrollbar .progress-bar {
     transition: .1s linear;
-}
+} */

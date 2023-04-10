@@ -8,6 +8,12 @@ const noneBarStyles = {
         display: 'none',
     },
 };
+const indicatorBatStyles = {
+    parent: {
+        width: '8px',
+        height: '100vh',
+    },
+};
 const topBarStyles = {
     parent: {
         height:' 3.5px',
@@ -36,6 +42,9 @@ const ScrollBars = () => {
             case "right bar":
                 setStyles(rightBarStyles);
                 break;
+            case "indicator":
+                setStyles(indicatorBatStyles);
+                break;
             default:
                 setStyles(noneBarStyles);
                 break;
@@ -63,7 +72,10 @@ const ScrollBars = () => {
             className='progress-bar' 
             style={{ 
                 width: selectedBar === "top bar" ? `${ height }%` : 'inherit',
-                height: selectedBar === "right bar" ? `${ height }%` : 'inherit',
+                height: selectedBar === "right bar" ? `${ height }%` : selectedBar === "indicator" ? '60px' : 'inherit',
+                position: selectedBar === "indicator" ? 'absolute' : '',
+                top: selectedBar === "indicator" ? `clamp(0%, ${ height }%, calc(100% - 60px))` : '',
+                borderRadius: selectedBar === "indicator" ? '6px' : '',
                 background: selectedColor,
             }}
         ></div>
