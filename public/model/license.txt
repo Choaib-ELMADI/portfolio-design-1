@@ -1,0 +1,11 @@
+Model Information:
+* title:	Revolving Parametric Tower
+* source:	https://sketchfab.com/3d-models/revolving-parametric-tower-3d9a9506a57148608890ad9d7b33c1a2
+* author:	Ayman.Ibrahim (https://sketchfab.com/Ayman.Ibrahim)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Revolving Parametric Tower" (https://sketchfab.com/3d-models/revolving-parametric-tower-3d9a9506a57148608890ad9d7b33c1a2) by Ayman.Ibrahim (https://sketchfab.com/Ayman.Ibrahim) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
