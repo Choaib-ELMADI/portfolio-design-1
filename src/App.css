@@ -3,6 +3,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .app__main-content {
@@ -61,4 +62,11 @@
 }
 .app.green .app__cursor .cursor-point.pulse::before {
     border-color: green;
+}
+
+
+@media screen and (width <= 800px) {
+    .app {
+        flex-direction: column;
+    }
 }

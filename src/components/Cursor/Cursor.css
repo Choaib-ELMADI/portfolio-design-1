@@ -61,3 +61,9 @@
         height: 40px;
     }
 }
+
+@media screen and (width <= 800px) {
+    .app__cursor {
+        display: none;
+    }
+}
