@@ -8,6 +8,7 @@ import { useStateContext } from '../../StateContext/StateContext';
 const Cursor = () => {
     const [position, setPosition] = useState({ x: -15, y: -15 });
     const [hidden, setHidden] = useState(false);
+    const [pulse, setPulse] = useState(false);
     const { selectedColor } = useStateContext();
 
     useEffect(() => {
@@ -25,6 +26,22 @@ const Cursor = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const handlePulse = () => {
+            setPulse(pulse => !pulse);
+            setTimeout(() => {
+                setPulse(false);
+            }, 350);
+        };
+    
+        window.addEventListener('click', handlePulse);
+
+        return () => {
+            window.removeEventListener('click', handlePulse);
+        };
+    }, [pulse]);
+    
+
     return (
         <div 
             className={ `${ hidden ? 'app__cursor hidden' : 'app__cursor' }` }
@@ -34,7 +51,7 @@ const Cursor = () => {
                 borderColor: selectedColor,
             }}
         >
-            <div className='cursor-point' style={{ background: selectedColor }} />
+            <div className={ pulse ? 'cursor-point pulse' : 'cursor-point' } style={{ background: selectedColor }} />
         </div>
     );
 };

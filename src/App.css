@@ -37,3 +37,28 @@
 .app.green *::selection {
     color: green;
 }
+
+.app.yellow .app__cursor .cursor-point.pulse::before {
+    border-color: yellow;
+}
+.app.blue .app__cursor .cursor-point.pulse::before {
+    border-color: blue;
+}
+.app.red .app__cursor .cursor-point.pulse::before {
+    border-color: red;
+}
+.app.orange .app__cursor .cursor-point.pulse::before {
+    border-color: orange;
+}
+.app.lightseagreen .app__cursor .cursor-point.pulse::before {
+    border-color: lightseagreen;
+}
+.app.white .app__cursor .cursor-point.pulse::before {
+    border-color: white;
+}
+.app.greenyellow .app__cursor .cursor-point.pulse::before {
+    border-color: greenyellow;
+}
+.app.green .app__cursor .cursor-point.pulse::before {
+    border-color: green;
+}
