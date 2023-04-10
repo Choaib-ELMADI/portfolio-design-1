@@ -6,3 +6,4 @@ export { default as Scroll }       from './Scroll/Scroll';
 
 export { default as About }        from './About/About';
 export { default as Settings }     from './Settings/Settings';
+export { default as ScrollBars }   from './ScrollBars/ScrollBars';

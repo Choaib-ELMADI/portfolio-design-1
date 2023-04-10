@@ -69,6 +69,7 @@ const Settings = () => {
                                                 name='color'
                                                 id={ c }
                                                 checked={ selectedColor === c }
+                                                onChange={ () => setSelectedColor(selectedColor) }
                                             />
                                         </label>
                                     ))
@@ -88,6 +89,7 @@ const Settings = () => {
                                                 name='bar'
                                                 id={ bar }
                                                 checked={ selectedBar === bar }
+                                                onChange={ () => setSelectedBar(bar) }
                                             />
                                             { bar }
                                         </label>
@@ -108,6 +110,7 @@ const Settings = () => {
                                                 name='effect'
                                                 id={ effect }
                                                 checked={ selectedEffect === effect }
+                                                onChange={ () => setSelectedEffect(effect) }
                                             />
                                             { effect }
                                         </label>
