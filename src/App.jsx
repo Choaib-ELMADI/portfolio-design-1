@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars, Canva } from './components';
+import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars, Canva, LoadingPage } from './components';
 import './App.css';
 import { useStateContext } from './StateContext/StateContext';
 
@@ -8,6 +10,9 @@ import { useStateContext } from './StateContext/StateContext';
 
 const App = () => {
   const { selectedColor } = useStateContext();
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className={ `app ${ selectedColor }` }>
@@ -15,6 +20,7 @@ const App = () => {
       <Scroll />
       <Settings />
       <ScrollBars />
+      <LoadingPage />
       {/* <Canva /> */}
 
       <LeftCard />

@@ -1,0 +1,61 @@
+.app__loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .25rem;
+    z-index: 9999;
+    transition: .4s;
+    color: var(--white);
+}
+
+.app__loading-page.hidden {
+    transform: translateY(-100%);
+}
+
+.app__loading-page .title-container {
+    height: 40px;
+    width: max-content;
+    overflow: hidden;
+}
+
+.app__loading-page .title-container h1 {
+    line-height: 40px;
+    animation: moveText 1.5s 1 2s;
+    font-family: var(--font__2);
+    font-size: 28px;
+}
+
+@keyframes moveText {
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.app__loading-page .loading-progress {
+    width: 60%;
+    max-width: 240px;
+    height: 1.5px;
+    background: transparent;
+}
+
+.app__loading-page .loading-progress .progress-value {
+    height: inherit;
+    background: var(--white);
+    animation: progressWidth 2.8s linear;
+}
+
+@keyframes progressWidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
