@@ -6,7 +6,7 @@ import { useStateContext } from '../../StateContext/StateContext';
 
 
 const Cursor = () => {
-    const [position, setPosition] = useState({ x: 0, y:0 });
+    const [position, setPosition] = useState({ x: -15, y: -15 });
     const [hidden, setHidden] = useState(false);
     const { selectedColor } = useStateContext();
 
