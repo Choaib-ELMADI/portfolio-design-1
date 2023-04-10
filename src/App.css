@@ -12,3 +12,28 @@
 ::selection {
     background: transparent;
 }
+
+.app.yellow *::selection {
+    color: yellow;
+}
+.app.blue *::selection {
+    color: blue;
+}
+.app.red *::selection {
+    color: red;
+}
+.app.orange *::selection {
+    color: orange;
+}
+.app.lightseagreen *::selection {
+    color: lightseagreen;
+}
+.app.white *::selection {
+    color: white;
+}
+.app.greenyellow *::selection {
+    color: greenyellow;
+}
+.app.green *::selection {
+    color: green;
+}
