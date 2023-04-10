@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars } from './components';
+import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars, Canva } from './components';
 import './App.css';
 import { useStateContext } from './StateContext/StateContext';
 
@@ -15,7 +15,10 @@ const App = () => {
       <Scroll />
       <Settings />
       <ScrollBars />
+      {/* <Canva /> */}
+
       <LeftCard />
+
       <div className='app__main-content'>
         <Introduction />
         <About />

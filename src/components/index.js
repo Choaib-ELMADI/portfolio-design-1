@@ -7,3 +7,6 @@ export { default as Scroll }       from './Scroll/Scroll';
 export { default as About }        from './About/About';
 export { default as Settings }     from './Settings/Settings';
 export { default as ScrollBars }   from './ScrollBars/ScrollBars';
+
+export { default as Canva }        from './Canvas/Canva';
+export { default as Loader }       from './Loader/Loader';
