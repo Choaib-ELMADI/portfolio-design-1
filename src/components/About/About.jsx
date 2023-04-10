@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 
 import './About.css';
 
 
 
 const About = () => {
-    useEffect(() => {
-        AOS.init();
-    }, []);
-
     return (
         <div className='app__about'>
             <h3 data-aos="fade-up">About</h3>
