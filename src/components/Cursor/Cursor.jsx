@@ -31,7 +31,7 @@ const Cursor = () => {
             setPulse(pulse => !pulse);
             setTimeout(() => {
                 setPulse(false);
-            }, 350);
+            }, 250);
         };
     
         window.addEventListener('click', handlePulse);

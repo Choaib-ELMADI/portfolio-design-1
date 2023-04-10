@@ -43,7 +43,7 @@
     height: 0;
     border: 1px solid yellow;
     border-radius: 50%;
-    animation: pulse .35s 1 linear;
+    animation: pulse .25s 1 linear;
     z-index: -1;
 }
 
