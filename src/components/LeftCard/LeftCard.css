@@ -12,7 +12,8 @@
 .app__leftcard .image-container {
     width: 100%;
     position: relative;
-    transform: perspective(5rem) rotate3d(0, 0.1, 0, .03rad);
+    transform: perspective(5rem) 
+               rotate3d(0, 0.1, 0, .03rad);
     display: grid;
     place-items: center;
 }

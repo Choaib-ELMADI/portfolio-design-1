@@ -1,0 +1,63 @@
+.app__leftcard-small {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.app__leftcard-small .profile {
+    width: 100%;
+    height: 100%;
+    transition: .3s cubic-bezier(.25,.75,.5,1.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.app__leftcard-small.skew .profile {
+    transform: rotateY(50deg) 
+               translateX(-50%) 
+               scale(.7);
+    opacity: .3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.app__leftcard-small .profile img {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+
+.app__leftcard-small .profile .title {
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: .2s;
+}
+
+
+.app__leftcard-small .profile .title h1 {
+    color: var(--white);
+    font-family: var(--font__2);
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
+.app__leftcard-small.skew .profile .title {
+    opacity: 0;
+    visibility: hidden;
+}
+    
+.app__leftcard-small .profile .title span {
+    left: 0rem;
+    bottom: 0rem;
+    width: 50%;
+    height: 2px;
+    background: var(--white);
+    position: absolute;
+}
