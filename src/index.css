@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Teko:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
 :root {
     --main__color: orangered;
@@ -15,12 +16,11 @@
 
     --font__1: 'Teko';
     --font__2: 'Montserrat';
-    --font__3: 'Source Sans Pro', sans-serif;
+    --font__3: 'Source Sans Pro';
 
-    --verysmallText: 10px;
     --smallText:     15px;
-    --mediumText:    24px;
-    --largeText:     35px;
+    --mediumText:    26px;
+    --largeText:     40px;
     --verylargeText: 70px;
 }
 

@@ -8,21 +8,25 @@
 }
 
 .app__intro h3 {
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    font-family: var(--font__3);
+    font-size: var(--smallText);
+    font-weight: 600;
 }
 
 .app__intro p {
     margin-left: 2rem;
-    font-size: 60px;
-    line-height: 75px;
-    font-weight: lighter;
-    letter-spacing: 4px;
+    font-size: var(--verylargeText);
+    line-height: var(--verylargeText);
+    font-family: var(--font__3);
+    font-weight: 200;
+    letter-spacing: .6px;
     width: 100%;
     max-width: 470px;
 }
 
 .app__intro .bar {
-    width: 40px;
+    width: 30px;
     height: 1.5px;
     background: var(--white);
 }

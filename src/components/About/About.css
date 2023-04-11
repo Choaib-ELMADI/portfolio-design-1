@@ -8,43 +8,41 @@
 }
 
 .app__about h3 {
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    font-family: var(--font__3);
+    font-size: var(--smallText);
+    font-weight: 600;
 }
 
 .app__about .first {
     margin-left: 2rem;
-    font-size: 34px;
-    line-height: 34px;
-    font-weight: lighter;
-    letter-spacing: 2px;
+    font-size: var(--largeText);
+    font-family: var(--font__3);
+    font-weight: 200;
+    line-height: 50px;
+    letter-spacing: .4px;
     width: 100%;
     max-width: 480px;
 }
 
 .app__about .bar {
-    width: 40px;
+    width: 30px;
     height: 1.5px;
     background: var(--white);
 }
 
 .app__about .second {
-    font-size: 22px;
-    line-height: 30px;
-    color: var(--white__2);
+    color: var(--gray);
     width: 100%;
     max-width: 480px;
-    font-family: var(--font__2);
+    font-size: var(--mediumText);
+    line-height: 30px;
+    font-family: var(--font__3);
+    font-weight: 200;
 }
 
 @media screen and (width <= 800px) {
     .app__about .first {
-        font-size: 30px;
-        line-height: 30px;
         margin-left: .75rem;
-    }
-
-    .app__about .second {
-        font-size: 18px;
-        line-height: 30px;
     }
 }

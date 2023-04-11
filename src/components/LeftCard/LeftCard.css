@@ -12,8 +12,7 @@
 .app__leftcard .image-container {
     width: 100%;
     position: relative;
-    transform: perspective(5rem) 
-               rotate3d(0, 0.1, 0, .03rad);
+    transform: perspective(5rem) rotate3d(0, 0.1, 0, .03rad);
     display: grid;
     place-items: center;
 }
@@ -63,15 +62,21 @@
     left: 1.5rem;
     bottom: 2rem;
     color: var(--white);
-    letter-spacing: 1px;
     z-index: 3;
+}
+
+.app__leftcard .image-container .profile h2 {
+    font-size: var(--smallText);
+    font-family: var(--font__3);
+    font-weight: 300;
+    letter-spacing: .3px;
 }
 
 .app__leftcard .image-container .title span {
     position: absolute;
     left: 0rem;
-    bottom: 0rem;
-    width: 50%;
-    height: 2px;
+    bottom: -.4rem;
+    width: 30px;
+    height: 1.5px;
     background: var(--white);
 }
