@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 const Context = createContext();
 
 
@@ -7,6 +7,18 @@ export const StateContext = ({ children }) => {
     const [selectedColor, setSelectedColor] = useState("yellow");
     const [selectedBar, setSelectedBar] = useState("none");
     const [selectedEffect, setSelectedEffect] = useState("tech");
+    const [visible, setVisible] = useState(true);
+
+    const scrolling = () => {
+      if (window.scrollY > 80) {
+          setVisible(false);
+      } else {
+        setVisible(true);
+      }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', scrolling);
+    }, []);
 
     return (
         <Context.Provider
@@ -17,6 +29,7 @@ export const StateContext = ({ children }) => {
                 setSelectedBar,
                 selectedEffect,
                 setSelectedEffect,
+                visible
             }}
         >
             { children }

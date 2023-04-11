@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './Scroll.css';
+import { useStateContext } from '../../StateContext/StateContext';
 
 
 
 const Scroll = () => {
-    const [visible, setVisible] = useState(true);
-
-    const scrolling = () => {
-      if (window.scrollY > 80) {
-          setVisible(false);
-      } else {
-        setVisible(true);
-      }
-    }
-    useEffect(() => {
-        window.addEventListener('scroll', scrolling);
-    }, [])
-    
+    const { visible } = useStateContext();
 
     return (
         <div className={ visible ? 'app__scroll' : 'app__scroll hidden'}>
