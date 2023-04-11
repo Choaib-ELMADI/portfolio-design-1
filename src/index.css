@@ -8,11 +8,20 @@
     --white__2:    #e4e4e450;
     --white__3:    #e4e4e480;
     --white:       #e4e4e4;
+    
+    --gray:          #7c7c7c;
 
     --background:  #212121;
 
     --font__1: 'Teko';
     --font__2: 'Montserrat';
+    --font__3: 'Source Sans Pro', sans-serif;
+
+    --verysmallText: 10px;
+    --smallText:     15px;
+    --mediumText:    24px;
+    --largeText:     35px;
+    --verylargeText: 70px;
 }
 
 * {
