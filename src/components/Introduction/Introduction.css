@@ -14,6 +14,7 @@
 .app__intro p {
     margin-left: 2rem;
     font-size: 60px;
+    line-height: 75px;
     font-weight: lighter;
     letter-spacing: 4px;
     width: 100%;
@@ -24,4 +25,10 @@
     width: 40px;
     height: 1.5px;
     background: var(--white);
+}
+
+@media screen and (width <= 575px) {
+    .app__intro p {
+        margin-left: .75rem;
+    }
 }

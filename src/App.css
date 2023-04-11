@@ -1,5 +1,7 @@
 .app {
     width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -67,5 +69,7 @@
 @media screen and (width <= 800px) {
     .app {
         flex-direction: column;
+        padding: 0 2rem;
+        align-items: center;
     }
 }
