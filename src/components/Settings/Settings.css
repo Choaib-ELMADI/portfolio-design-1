@@ -28,6 +28,7 @@
     position: fixed;
     background: rgba(33, 33, 33, 0.9);
     z-index: 10;
+    overflow: scroll;
 }
 
 .close-settings {
@@ -41,15 +42,18 @@
 .app__settings-params {
     width: 100%;
     max-width: 1000px;
+    height: max-content;
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 8rem;
     margin-left: auto;
-    min-height: 100%;
     background: #272727;
+    color: var(--white);
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
-    padding-left: 8rem;
-    gap: 2rem;
-    color: var(--white);
 }
 
 .app__settings-params h2 {
