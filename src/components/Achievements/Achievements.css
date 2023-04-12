@@ -1,0 +1,29 @@
+.app__achievements-achieve {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.app__achievements-achieve .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.app__achievements-achieve .card h1 {
+    font-family: var(--font__3);
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.app__achievements-achieve .card p {
+    font-family: var(--font__3);
+    font-size: 22px;
+    font-weight: 200;
+    color: var(--gray);
+}

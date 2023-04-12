@@ -5,6 +5,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    padding-right: 3rem;
 }
 
 .app__main-content {
