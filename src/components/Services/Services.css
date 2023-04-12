@@ -3,7 +3,7 @@
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    /* gap: 2.5rem; */
+    gap: 2rem;
 }
 
 .app__services-services .service {
@@ -23,6 +23,8 @@
     font-family: var(--font__3);
     font-weight: 300;
     font-size: var(--mediumText);
+    color: white;
+    letter-spacing: -.15px;
 }
 
 .app__services-services .service .service-title label {
@@ -46,18 +48,27 @@
 }
 
 .app__services-services .service .service-description {
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transform: scaleY(0);
-    transition: .3s;
+    transition: .2s;
 }
 
 .app__services-services .service.active .service-description {
-    transform: scaleY(1);
+    max-height: 300px;
+    transition: 0;
+    opacity: 1;
 }
 
 .app__services-services .service .service-description p {
     font-family: var(--font__3);
     color: var(--gray);
     font-weight: 200;
-    font-size: 30px;
+    font-size: var(--mediumText);
+    transform: translateY(-1rem);
+    transition: .2s;
+}
+
+.app__services-services .service.active .service-description p {
+    transform: translateY(0);
 }

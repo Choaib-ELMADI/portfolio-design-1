@@ -10,7 +10,7 @@
     --white__3:    #e4e4e480;
     --white:       #e4e4e4;
     
-    --gray:          #7c7c7c;
+    --gray:        #7c7c7c;
 
     --background:  #212121;
 
@@ -19,8 +19,8 @@
     --font__3: 'Source Sans Pro';
 
     --smallText:     15px;
-    --mediumText:    26px;
-    --largeText:     40px;
+    --mediumText:    24px;
+    --largeText:     36px;
     --verylargeText: 70px;
 }
 

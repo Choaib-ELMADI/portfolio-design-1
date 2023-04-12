@@ -10,7 +10,7 @@
 
 .app__main-content {
     flex: .5;
-    padding: 4rem 0;
+    padding-bottom: 5rem;
 }
 
 ::selection {

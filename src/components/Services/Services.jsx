@@ -6,16 +6,16 @@ import { BsChevronUp } from 'react-icons/bs';
 import './Services.css';
 const services = [
     {
-        title: 'Title 1',
-        desc: 'This is a description This is a description This is a description This is a description',
+        title: 'Web',
+        desc: 'UI Development - Technical Consultancy - App Development - Front-End Development - Dev-Ops',
     },
     {
-        title: 'Title 2',
-        desc: 'This is a description This is a description This is a description This is a description',
+        title: 'Arduino',
+        desc: 'Raspberry PI - Uno R3 - Nano - Mega - Electronics - Embedded Systems - Microcontrollers',
     },
     {
-        title: 'Title 3',
-        desc: 'This is a description This is a description This is a description This is a description',
+        title: '3D Modeling',
+        desc: '3d Modeling - 3d Rendering - Rapid Prototyping - 3D Sculpturing - CAD CAM',
     },
 ];
 
