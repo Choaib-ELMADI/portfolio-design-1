@@ -4,20 +4,7 @@ import 'aos/dist/aos.css';
 import { BsChevronUp } from 'react-icons/bs';
 
 import './Services.css';
-const services = [
-    {
-        title: 'Web',
-        desc: 'UI Development - Technical Consultancy - App Development - Front-End Development - Dev-Ops',
-    },
-    {
-        title: 'Arduino',
-        desc: 'Raspberry PI - Uno R3 - Nano - Mega - Electronics - Embedded Systems - Microcontrollers',
-    },
-    {
-        title: '3D Modeling',
-        desc: '3d Modeling - 3d Rendering - Rapid Prototyping - 3D Sculpturing - CAD CAM',
-    },
-];
+import { services } from '../../data';
 
 
 

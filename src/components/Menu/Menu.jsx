@@ -1,57 +1,11 @@
 import React,{ useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { HiBars2 } from 'react-icons/hi2';
-import { GiPositionMarker, GiCubes  } from 'react-icons/gi';
-import { BsFillPersonFill, BsWechat, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
-import { HiMenuAlt1 } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 import './Menu.css';
 import { useStateContext } from '../../StateContext/StateContext';
-const menuItems = [
-    {
-        id: 'home',
-        title: 'Home',
-        icon: <GiPositionMarker size={ 24 } />,
-    },
-    {
-        id: 'about',
-        title: 'About',
-        icon: <BsFillPersonFill size={ 24 } />,
-    },
-    {
-        id: 'resume',
-        title: 'Resume',
-        icon: <HiMenuAlt1 size={ 24 } />,
-    },
-    {
-        id: 'portfolio',
-        title: 'Portfolio',
-        icon: <GiCubes size={ 24 } />,
-    },
-    {
-        id: 'contact',
-        title: 'Contact',
-        icon: <BsWechat size={ 24 } />,
-    },
-];
-const socialItems = [
-    {
-        id: 'instagram',
-        link: '',
-        icon: <BsInstagram size={ 22 } />,
-    },
-    {
-        id: 'linkedin',
-        link: '',
-        icon: <BsLinkedin size={ 22 } />,
-    },
-    {
-        id: 'github',
-        link: '',
-        icon: <BsGithub size={ 22 } />,
-    },
-];
+import { menuItems, socialItems } from '../../data';
 
 
 

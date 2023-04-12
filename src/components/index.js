@@ -11,6 +11,7 @@ export { default as LoadingPage }  from './LoadingPage/LoadingPage';
 export { default as Menu }         from './Menu/Menu';
 export { default as Achievements } from './Achievements/Achievements';
 export { default as Services }     from './Services/Services';
+export { default as Experience }   from './Experience/Experience';
 
 export { default as Canva }        from './Canvas/Canva';
 export { default as Loader }       from './Loader/Loader';

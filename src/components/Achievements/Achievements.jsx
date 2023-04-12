@@ -3,28 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './Achievements.css';
-const achievements = [
-    {
-        title: 11,
-        desc: 'Certificates',
-        background: '#181818',
-    },
-    {
-        title: '23+',
-        desc: 'Projects',
-        background: '#111111',
-    },
-    {
-        title: '9+',
-        desc: 'Websites',
-        background: '#080808',
-    },
-    {
-        title: '130%',
-        desc: 'Happy',
-        background: 'black',
-    },
-];
+import { achievements } from '../../data';
 
 
 
