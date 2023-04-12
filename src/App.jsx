@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { 
   LeftCard, 
   Cursor, Scroll, Settings, ScrollBars, Menu, 
-  Introduction, About, Achievements,
+  Introduction, About, Achievements, Services, 
   LoadingPage, 
   Canva
 } from './components';
@@ -37,6 +37,7 @@ const App = () => {
         <Introduction />
         <About />
         <Achievements />
+        <Services />
       </div>
     </div>
   );

@@ -1,0 +1,63 @@
+.app__services-services {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2.5rem; */
+}
+
+.app__services-services .service {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app__services-services .service .service-title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.app__services-services .service .service-title h3 {
+    font-family: var(--font__3);
+    font-weight: 300;
+    font-size: var(--mediumText);
+}
+
+.app__services-services .service .service-title label {
+    transition: .2s;
+    transform: rotateZ(180deg);
+}
+
+.app__services-services .service.active .service-title label {
+    transform: rotateZ(0deg);
+    transition: .2s;
+}
+
+.app__services-services .service .service-title::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: calc(100% + .65rem);
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+}
+
+.app__services-services .service .service-description {
+    overflow: hidden;
+    transform: scaleY(0);
+    transition: .3s;
+}
+
+.app__services-services .service.active .service-description {
+    transform: scaleY(1);
+}
+
+.app__services-services .service .service-description p {
+    font-family: var(--font__3);
+    color: var(--gray);
+    font-weight: 200;
+    font-size: 30px;
+}
