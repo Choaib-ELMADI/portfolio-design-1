@@ -1,3 +1,7 @@
+.app__achievements {
+    padding-bottom: 4rem;
+}
+
 .app__achievements-achieve {
     width: 100%;
     max-width: 500px;
