@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars, Canva, LoadingPage } from './components';
+import { LeftCard, Introduction, Cursor, Scroll, About, Settings, ScrollBars, Canva, LoadingPage, Menu } from './components';
 import './App.css';
 import { useStateContext } from './StateContext/StateContext';
 
@@ -21,6 +21,7 @@ const App = () => {
       <Settings />
       <ScrollBars />
       <LoadingPage />
+      <Menu />
       {/* <Canva /> */}
 
       <LeftCard />

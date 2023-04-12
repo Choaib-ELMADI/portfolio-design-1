@@ -1,0 +1,102 @@
+.open-menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.app__menu {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    min-height: 100vh;
+    background: #181818;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(200%);
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    padding-left: clamp(3rem, 20%, 6rem);
+}
+
+.app__menu.vue {
+    transform: translateX(0);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 2;
+}
+
+.menu-overlay.active {
+    opacity: .6;
+    visibility: visible;
+}
+
+.app__menu-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.app__menu-menu .item-menu {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: var(--white__3);
+}
+
+.app__menu-menu .item-menu * {
+    font-family: var(--font__3);
+    font-weight: 300;
+    font-size: var(--smallText);
+}
+
+.app__menu-menu .item-menu label {
+    cursor: pointer;
+}
+
+.app__menu h3 {
+    color: var(--white__3);
+    font-family: var(--font__3);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.app__menu-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.app__menu-social .social-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.app__menu-social a {
+    text-decoration: none;
+    color: var(--white__3);
+}
+
+.app__menu-social a label {
+    cursor: pointer;
+}
