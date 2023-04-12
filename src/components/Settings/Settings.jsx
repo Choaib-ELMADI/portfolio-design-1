@@ -17,7 +17,8 @@ const Settings = () => {
     const { 
         selectedColor, setSelectedColor, 
         selectedBar, setSelectedBar, 
-        selectedEffect, setSelectedEffect 
+        selectedEffect, setSelectedEffect,
+        setMenuColor
     } = useStateContext();
 
     return (
@@ -62,7 +63,10 @@ const Settings = () => {
                                     colors.map((c) => (
                                         <label key={ c }
                                             style={{ background: c }}
-                                            onClick={ () => setSelectedColor(c) }
+                                            onClick={ () => {
+                                                setSelectedColor(c);
+                                                setMenuColor(c);
+                                            }}
                                         >
                                             <input
                                                 type='radio'

@@ -4,6 +4,7 @@ import { HiBars2 } from 'react-icons/hi2';
 import { GiPositionMarker, GiCubes  } from 'react-icons/gi';
 import { BsFillPersonFill, BsWechat, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 
 import './Menu.css';
 import { useStateContext } from '../../StateContext/StateContext';
@@ -55,10 +56,9 @@ const socialItems = [
 
 
 const Menu = () => {
-    const { vueMenu, setVueMenu, selectedColor } = useStateContext();
+    const { vueMenu, setVueMenu, selectedColor, menuColor, setMenuColor } = useStateContext();
     const [hoveredItem, setHoveredItem] = useState(null);
-    const [activeItem, setActiveItem] = useState(null);
-    const [color, setColor] = useState(null);
+    const [activeItem, setActiveItem] = useState('home');
     const [color2, setColor2] = useState("#e4e4e4");
 
     return (
@@ -71,34 +71,44 @@ const Menu = () => {
             >
                 { vueMenu ? <IoClose color={ color2 } size={ 26 } /> : <HiBars2 color={ color2 } size={ 26 } /> }
             </div>
-            <div className={ vueMenu ? 'menu-overlay active' : 'menu-overlay' } onClick={ () => setVueMenu(false) }/>
+            <div 
+                className={ vueMenu ? 'menu-overlay active' : 'menu-overlay' } 
+                onClick={ () => setVueMenu(false) }
+            />
             <div className={ vueMenu ? 'app__menu vue' : 'app__menu' }>
-                <div className='app__menu-menu'>
+                <div 
+                    className='app__menu-menu'
+                >
                     <h3>Menu</h3>
                     {
-                        menuItems.map(item => (
-                            <a 
+                        menuItems.map((item, index) => (
+                            <motion.a 
                                 key={ item.id } 
                                 href={ `#${ item.id }` }
                                 className='item-menu'
                                 onPointerEnter={ () => {
-                                    setColor(selectedColor);
+                                    setMenuColor(selectedColor);
                                     setHoveredItem(item.id);
                                 }}
                                 onPointerLeave={ () => {
-                                    setColor(selectedColor);
+                                    setMenuColor(selectedColor);
                                     setHoveredItem(null);
                                 }}
                                 onClick={ () => setActiveItem(item.id) }
                                 style={{ 
-                                    color: activeItem === item.id ? color : '', 
-                                    transition: '.3s' 
+                                    color: activeItem === item.id ? menuColor : '', 
+                                    transition: '.3s',
+                                }}
+                                animate={ vueMenu ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 } }
+                                transition={{ 
+                                    duration: .5, 
+                                    delay: vueMenu ? .15 * index : 0 
                                 }}
                             >
                                 <label 
                                     className='item-menu-icon' 
                                     style={{ 
-                                        color: hoveredItem === item.id ? color : '', 
+                                        color: hoveredItem === item.id ? menuColor : '', 
                                         transition: '.3s' 
                                     }}
                                 >
@@ -107,13 +117,13 @@ const Menu = () => {
                                 <label 
                                     className='item-menu-title' 
                                     style={{ 
-                                        color: hoveredItem === item.id ? color : '', 
+                                        color: hoveredItem === item.id ? menuColor : '', 
                                         transition: '.3s' 
                                     }}
                                 >
                                     { item.title }
                                 </label>
-                            </a>
+                            </motion.a>
                         ))
                     }
                 </div>
@@ -121,32 +131,37 @@ const Menu = () => {
                     <h3>Social</h3>
                     <div className='social-container'>
                         {
-                            socialItems.map(item => (
-                                <a 
+                            socialItems.map((item, index) => (
+                                <motion.a 
                                     key={ item.id } 
                                     href={ item.link }
                                     className='item-social'
                                     target='_blank'
                                     rel='noreferrer'
                                     onPointerEnter={ () => {
-                                        setColor(selectedColor);
+                                        setMenuColor(selectedColor);
                                         setHoveredItem(item.id);
                                     }}
                                     onPointerLeave={ () => {
-                                        setColor(selectedColor);
+                                        setMenuColor(selectedColor);
                                         setHoveredItem(null);
+                                    }}
+                                    animate={ vueMenu ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 } }
+                                    transition={{ 
+                                        duration: .5, 
+                                        delay: vueMenu ? .4 * index : 0 
                                     }}
                                 >
                                     <label
                                         className='item-social-icon'
                                         style={{ 
-                                            color: hoveredItem === item.id ? color : '', 
+                                            color: hoveredItem === item.id ? menuColor : '', 
                                             transition: '.3s' 
                                         }}
                                     >
                                         { item.icon }
                                     </label>
-                                </a>
+                                </motion.a>
                             ))
                         }
                     </div>

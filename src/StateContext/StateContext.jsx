@@ -9,6 +9,7 @@ export const StateContext = ({ children }) => {
     const [selectedEffect, setSelectedEffect] = useState("tech");
     const [visible, setVisible] = useState(true);
     const [vueMenu, setVueMenu] = useState(false);
+    const [menuColor, setMenuColor] = useState(selectedColor);
 
     const scrolling = () => {
       if (window.scrollY > 80) {
@@ -33,6 +34,8 @@ export const StateContext = ({ children }) => {
                 visible,
                 vueMenu,
                 setVueMenu,
+                menuColor,
+                setMenuColor
             }}
         >
             { children }

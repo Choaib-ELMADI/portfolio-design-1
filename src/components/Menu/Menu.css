@@ -10,7 +10,9 @@
     width: 100%;
     max-width: 400px;
     height: 100%;
-    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: clamp(3rem, 20%, 6rem);
     background: #181818;
     overflow: scroll;
     position: fixed;
@@ -24,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
-    padding-left: clamp(3rem, 20%, 6rem);
 }
 
 .app__menu.vue {
@@ -100,3 +101,9 @@
 .app__menu-social a label {
     cursor: pointer;
 }
+
+/* @media screen and (orientation: landscape) {
+    .app__menu {
+        justify-content: flex-start;
+    }
+} */
