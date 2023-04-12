@@ -6,7 +6,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <div className='app__about'>
+        <div className='app__about app__section'>
             <h3 data-aos="fade-up">About</h3>
             <p className='first' data-aos="fade-up">
                 My approach to building the tech brands of tomorrow.

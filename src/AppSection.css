@@ -1,4 +1,4 @@
-/* .app__about {
+.app__section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,14 +7,14 @@
     gap: 2.5rem;
 }
 
-.app__about h3 {
+.app__section h3 {
     letter-spacing: 1.5px;
     font-family: var(--font__3);
     font-size: var(--smallText);
     font-weight: 600;
 }
 
-.app__about .first {
+.app__section .first {
     margin-left: 2rem;
     font-size: var(--largeText);
     font-family: var(--font__3);
@@ -25,13 +25,13 @@
     max-width: 480px;
 }
 
-.app__about .bar {
+.app__section .bar {
     width: 30px;
     height: 1.5px;
     background: var(--white);
 }
 
-.app__about .second {
+.app__section .second {
     color: var(--gray);
     width: 100%;
     max-width: 480px;
@@ -42,8 +42,7 @@
 }
 
 @media screen and (width <= 800px) {
-    .app__about .first {
+    .app__section .first {
         margin-left: .75rem;
     }
-} */
-
+}

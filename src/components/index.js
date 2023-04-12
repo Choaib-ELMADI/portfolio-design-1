@@ -9,6 +9,7 @@ export { default as Settings }     from './Settings/Settings';
 export { default as ScrollBars }   from './ScrollBars/ScrollBars';
 export { default as LoadingPage }  from './LoadingPage/LoadingPage';
 export { default as Menu }         from './Menu/Menu';
+export { default as Achievements } from './Achievements/Achievements';
 
 export { default as Canva }        from './Canvas/Canva';
 export { default as Loader }       from './Loader/Loader';
