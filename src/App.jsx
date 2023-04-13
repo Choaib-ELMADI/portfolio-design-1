@@ -3,10 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { 
-  LeftCard, 
-  Cursor, Scroll, Settings, ScrollBars, Menu, 
-  Introduction, About, Achievements, Services, Experience, Skills, 
-  LoadingPage, 
+  Cursor, Scroll, Settings, ScrollBars, Menu, LoadingPage, 
+  LeftCard, Introduction, About, Achievements, Services, Experience, Skills, Portfolio,
   Canva,
 } from './components';
 import { useStateContext } from './StateContext/StateContext';
@@ -40,6 +38,7 @@ const App = () => {
         <Services />
         <Experience />
         <Skills />
+        <Portfolio />
       </div>
     </div>
   );
