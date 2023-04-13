@@ -1,6 +1,7 @@
 import { GiPositionMarker, GiCubes  } from 'react-icons/gi';
 import { BsFillPersonFill, BsWechat, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import images from './constants/images';
 
 
 export const services = [
@@ -133,5 +134,28 @@ export const skills = [
         title: 'Blender',
         progress: '35%',
         category: '3d',
+    },
+];
+
+export const projects = [
+    {
+        id: 'cars',
+        background: images.cars2,
+        title: 'Immersive Solutions',
+    },
+    {
+        id: 'electro',
+        background: images.electro3,
+        title: 'Adaptive Generation',
+    },
+    {
+        id: 'ice',
+        background: images.ice1,
+        title: 'Surface Experience',
+    },
+    {
+        id: 'nature',
+        background: images.nature4,
+        title: 'Frame Manifacturer',
     },
 ];

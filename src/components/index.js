@@ -5,6 +5,7 @@ export { default as Achievements } from './Sections/Achievements/Achievements';
 export { default as Services }     from './Sections/Services/Services';
 export { default as Experience }   from './Sections/Experience/Experience';
 export { default as Skills }       from './Sections/Skills/Skills';
+export { default as Portfolio }    from './Sections/Portfolio/Portfolio';
 
 export { default as Cursor }       from './Layers/Cursor/Cursor';
 export { default as Scroll }       from './Layers/Scroll/Scroll';
