@@ -107,3 +107,31 @@ export const experiences = [
         desc   : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
     },
 ];
+
+export const skills = [
+    {
+        title: 'HTML/CSS',
+        progress: '85%',
+        category: 'web',
+    },
+    {
+        title: 'JavaScript',
+        progress: '78%',
+        category: 'web',
+    },
+    {
+        title: 'ReactJs',
+        progress: '70%',
+        category: 'web',
+    },
+    {
+        title: 'SolidWorks',
+        progress: '75%',
+        category: '3d',
+    },
+    {
+        title: 'Blender',
+        progress: '35%',
+        category: '3d',
+    },
+];

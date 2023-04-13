@@ -1,10 +1,12 @@
 .app__section {
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--white);
     gap: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .app__section h3 {
