@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './Experience.css';
+import { experiences } from '../../data';
 
 
 
@@ -25,30 +26,15 @@ const Experience = () => {
             <div className='app__experiences-timeline'>
                 <div className='line' />
                 <div className='app__experiences-container'>
-                    <div className='app__experiences-item' data-aos="fade-up">
-                        <h3>Company Date</h3>
-                        <h1>Specificity</h1>
-                        <p>
-                            Lorem, ipsum dolor 
-                            sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div className='app__experiences-item' data-aos="fade-up">
-                        <h3>Company Date</h3>
-                        <h1>Specificity</h1>
-                        <p>
-                            Lorem, ipsum dolor 
-                            sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div className='app__experiences-item' data-aos="fade-up">
-                        <h3>Company Date</h3>
-                        <h1>Specificity</h1>
-                        <p>
-                            Lorem, ipsum dolor 
-                            sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
+                    {
+                        experiences.map((exp, i) => (
+                            <div key={ `experience-${ i+1 }` } className='app__experiences-item' data-aos="fade-up">
+                                <h3>{ exp.company && exp.date }</h3>
+                                <h1>{ exp.title }</h1>
+                                <p>{ exp.desc }</p>
+                            </div>  
+                        ))
+                    }
                 </div>
             </div>
         </div>

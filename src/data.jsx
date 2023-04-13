@@ -86,3 +86,24 @@ export const socialItems = [
         icon: <BsGithub size={ 22 } />,
     },
 ];
+
+export const experiences = [
+    {
+        company: 'Self-employed',
+        date   : '2021 - Present',
+        title  : 'Front-End Developer',
+        desc   : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Pariatur.',
+    },
+    {
+        company: 'Self-employed',
+        date   : '2023',
+        title  : 'Back-End Developer',
+        desc   : 'Lorem ipsum dolor sit amet consectetur.',
+    },
+    {
+        company: 'Freelancer',
+        date   : '2022 - Present',
+        title  : 'React Developer',
+        desc   : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+    },
+];

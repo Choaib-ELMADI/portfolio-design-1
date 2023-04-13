@@ -23,7 +23,7 @@
     background: #171717;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: .5rem;
     position: relative;
 }
 
@@ -42,9 +42,30 @@
 .app__experiences-timeline .app__experiences-container .app__experiences-item::after {
     position: absolute;
     content: '';
-    left: calc(-2.5rem - 1.5px);
+    left: -2.5rem;
     top: 2rem;
-    width: 1px;
+    width: 2px;
     height: 2.5rem;
     background: var(--white);
+    transform: translateX(-50%);
+}
+
+.app__experiences-timeline .app__experiences-container .app__experiences-item h3 {
+    font-family: var(--font__3);
+    font-weight: 400;
+    font-size: var(--smallText);
+    letter-spacing: .24px;
+}
+
+.app__experiences-timeline .app__experiences-container .app__experiences-item h1 {
+    font-family: var(--font__3);
+    font-weight: 200;
+    font-size: 26px;
+}
+
+.app__experiences-timeline .app__experiences-container .app__experiences-item p {
+    font-family: var(--font__3);
+    font-weight: 200;
+    font-size: 25px;
+    color: var(--white__2);
 }
