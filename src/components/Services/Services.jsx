@@ -26,7 +26,7 @@ const Services = () => {
                 Lorem ipsum dolor sit amet, consectetur.
                 adipiscing elit. Aenean et elementum purus.
             </p>
-            <ul className='app__services-services'>
+            <ul className='app__services-services' data-aos="fade-up">
                 {
                     services.map((s, i) => (
                         <li
