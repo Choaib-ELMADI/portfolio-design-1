@@ -69,3 +69,9 @@
     font-size: 25px;
     color: var(--white__2);
 }
+
+@media screen and (width <= 600px) {
+    .app__experiences-timeline .app__experiences-container .app__experiences-item {
+        padding: 1rem 1.5rem;
+    }
+}
