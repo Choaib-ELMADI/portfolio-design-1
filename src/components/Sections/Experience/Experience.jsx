@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './Experience.css';
-import { experiences } from '../../data';
+import { experiences } from '../../../data';
 
 
 

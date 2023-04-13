@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './Achievements.css';
-import { achievements } from '../../data';
+import { achievements } from '../../../data';
 
 
 

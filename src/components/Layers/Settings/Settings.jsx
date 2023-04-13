@@ -3,7 +3,7 @@ import { FiSettings } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 
-import { useStateContext } from '../../StateContext/StateContext';
+import { useStateContext } from '../../../StateContext/StateContext';
 import './Settings.css';
 const colors = ["yellow", "blue", "red", "orange", "lightseagreen", "white", "greenyellow", "green"];
 const scrollBars = ["none", "indicator", "top bar", "right bar"];

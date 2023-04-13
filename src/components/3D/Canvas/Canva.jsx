@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
-import { Loader } from '../index';
+import { Loader } from '../../index';
 import './Canva.css';
 
 const Model = () => {

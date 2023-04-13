@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import { BsChevronUp } from 'react-icons/bs';
 
 import './Services.css';
-import { services } from '../../data';
+import { services } from '../../../data';
 
 
 

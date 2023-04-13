@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { useStateContext } from '../../StateContext/StateContext';
+import { useStateContext } from '../../../StateContext/StateContext';
 import './ScrollBars.css';
 
 const noneBarStyles = {

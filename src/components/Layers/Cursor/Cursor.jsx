@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import './Cursor.css';
-import { useStateContext } from '../../StateContext/StateContext';
+import { useStateContext } from '../../../StateContext/StateContext';
 
 
 

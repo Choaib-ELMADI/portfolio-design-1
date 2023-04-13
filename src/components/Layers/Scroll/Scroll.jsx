@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Scroll.css';
-import { useStateContext } from '../../StateContext/StateContext';
+import { useStateContext } from '../../../StateContext/StateContext';
 
 
 

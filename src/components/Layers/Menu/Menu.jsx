@@ -4,8 +4,8 @@ import { HiBars2 } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 
 import './Menu.css';
-import { useStateContext } from '../../StateContext/StateContext';
-import { menuItems, socialItems } from '../../data';
+import { useStateContext } from '../../../StateContext/StateContext';
+import { menuItems, socialItems } from '../../../data';
 
 
 

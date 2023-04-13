@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import images from '../../constants/images';
-import { useStateContext } from '../../StateContext/StateContext';
+import images from '../../../constants/images';
+import { useStateContext } from '../../../StateContext/StateContext';
 import './LeftCard.css';
 import './LeftCardSmall.css';
 

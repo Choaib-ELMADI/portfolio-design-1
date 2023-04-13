@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './Skills.css';
-import { skills } from '../../data';
+import { skills } from '../../../data';
 
 
 
