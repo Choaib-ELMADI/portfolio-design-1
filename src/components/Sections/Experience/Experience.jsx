@@ -13,7 +13,7 @@ const Experience = () => {
     }, []);
 
     return (
-        <div className='app__experiences app__section'>
+        <div className='app__experiences app__section' id='resume'>
             <h3 data-aos="fade-up">Resume</h3>
             <p className='first' data-aos="fade-up">
                 Experiences

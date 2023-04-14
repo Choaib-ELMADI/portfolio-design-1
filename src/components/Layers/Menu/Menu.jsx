@@ -48,7 +48,10 @@ const Menu = () => {
                                     setMenuColor(selectedColor);
                                     setHoveredItem(null);
                                 }}
-                                onClick={ () => setActiveItem(item.id) }
+                                onClick={ () => {
+                                    setVueMenu(false);
+                                    setActiveItem(item.id);
+                                }}
                                 style={{ 
                                     color: activeItem === item.id ? menuColor : '', 
                                     transition: '.3s',

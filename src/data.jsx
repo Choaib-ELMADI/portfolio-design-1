@@ -73,17 +73,17 @@ export const menuItems = [
 export const socialItems = [
     {
         id: 'instagram',
-        link: '',
+        link: 'https://www.instagram.com/choaib_elmadi/',
         icon: <BsInstagram size={ 22 } />,
     },
     {
         id: 'linkedin',
-        link: '',
+        link: 'https://www.linkedin.com/in/choaib-elmadi/',
         icon: <BsLinkedin size={ 22 } />,
     },
     {
         id: 'github',
-        link: '',
+        link: 'https://github.com/Choaib-ELMADI/',
         icon: <BsGithub size={ 22 } />,
     },
 ];

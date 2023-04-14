@@ -66,7 +66,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className='app__contact app__section'>
+        <div className='app__contact app__section' id='contact'>
             <h3 data-aos="fade-up">Contact</h3>
             <p className='first' data-aos="fade-up">
                 Let's get in touch.

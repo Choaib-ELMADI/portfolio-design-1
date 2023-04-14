@@ -67,7 +67,7 @@ const Portfolio = () => {
     }, []);
 
     return (
-        <div className='app__portfolio app__section'>
+        <div className='app__portfolio app__section' id='portfolio'>
             <h3 data-aos="fade-up">Portfolio</h3>
             <p className='first' data-aos="fade-up">
                 Selected Work

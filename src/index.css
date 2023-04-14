@@ -29,6 +29,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--font__1);
+    scroll-behavior: smooth;
 }
 
 body {
