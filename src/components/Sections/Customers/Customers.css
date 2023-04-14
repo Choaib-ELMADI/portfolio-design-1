@@ -24,6 +24,10 @@
 }
 
 @media screen and (width <= 600px) {
+    .app__customers-container {
+        aspect-ratio: 1.5;
+    }
+
     .app__customers-container .app__customer img {
         width: 80%;
         height: 60%;
