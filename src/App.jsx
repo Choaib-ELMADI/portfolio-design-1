@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div className={ `app ${ selectedColor }` }>
-      <Cursor />
+      {/* <Cursor /> */}
       <Scroll />
       <Settings />
       <ScrollBars />

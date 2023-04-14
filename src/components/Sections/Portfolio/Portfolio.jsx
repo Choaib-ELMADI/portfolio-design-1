@@ -108,10 +108,10 @@ const Portfolio = () => {
                         <div className='images-container'>
                             <div className={ loading ? 'loading-images active' : 'loading-images'} />
                             <div className={ loading ? 'image' : 'image active'}>
-                                <div styel={{ display: !imageLoaded ? '' : 'none' }}>
+                                <div style={{ display: !imageLoaded ? '' : 'none' }}>
                                     <Blurhash 
-                                        width='100%'
-                                        height='100%'
+                                        width={ 700 }
+                                        height={ 700 }
                                         hash={ selectedProject.hashes[index] }
                                     />
                                 </div>

@@ -99,6 +99,7 @@
     max-width: 700px;
     aspect-ratio: 2.2;
     position: relative;
+    overflow: hidden;
 }
 
 .app__project-gallery .images-container-wrapper .images-container .loading-images {
@@ -178,6 +179,17 @@
     font-family: var(--font__3);
     font-size: var(--largeText);
     margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.app__project-gallery .app__project-gallery-details .gallery-details-content h1::after {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: var(--white);
+    bottom: 0;
+    left: 0;
 }
 
 .app__project-gallery .app__project-gallery-details .gallery-details-content p {
