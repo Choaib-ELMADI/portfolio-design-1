@@ -6,7 +6,7 @@ import {
   Cursor, Scroll, Settings, ScrollBars, Menu, LoadingPage, 
 
   LeftCard, Introduction, About, Achievements, 
-  Services, Experience, Skills, Portfolio, Customers,
+  Services, Experience, Skills, Portfolio, Customers, Testimonials, 
 
   Canva,
 } from './components';
@@ -43,6 +43,7 @@ const App = () => {
         <Skills />
         <Portfolio />
         <Customers />
+        <Testimonials />
       </div>
     </div>
   );

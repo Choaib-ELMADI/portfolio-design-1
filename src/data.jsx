@@ -251,3 +251,26 @@ export const customers = [
         logo: images.image9,
     },
 ];
+
+export const testimonials = [
+    {
+        testimonial: "We chose Ch.ELMADI because it's the perfect combination of convenience and quality. Team takes care of getting us high-quality websites quickly and all the other services.",
+        name: 'Elena Clouse',
+        company: 'CEO Stellar Inc.',
+    },
+    {
+        testimonial: "We chose Ch.ELMADI because it's the perfect combination of convenience and quality. Team takes care of getting us high-quality websites quickly and all the other services.",
+        name: 'John Miller',
+        company: 'CTO SpaceX Industries',
+    },
+    {
+        testimonial: "We chose Ch.ELMADI because it's the perfect combination of convenience and quality. Team takes care of getting us high-quality websites quickly and all the other services.",
+        name: 'Brandon Hadid',
+        company: 'CTO Market Hero',
+    },
+    {
+        testimonial: "We chose Ch.ELMADI because it's the perfect combination of convenience and quality. Team takes care of getting us high-quality websites quickly and all the other services.",
+        name: 'John Miller',
+        company: 'CTO SpaceX Industries',
+    },
+];
