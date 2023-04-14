@@ -111,7 +111,7 @@ const Portfolio = () => {
                                 <div style={{ display: !imageLoaded ? '' : 'none' }}>
                                     <Blurhash 
                                         width={ 700 }
-                                        height={ 700 }
+                                        height={ 320 }
                                         hash={ selectedProject.hashes[index] }
                                     />
                                 </div>
