@@ -86,19 +86,77 @@
     padding: 2rem 8px;
 }
 
-.app__project-gallery .app__gallery-toggle-details {
-    z-index: 99;
-}
-
-.app__project-gallery .images-container {
+.app__project-gallery .images-container-wrapper {
     flex: 1;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__project-gallery .images-container-wrapper .images-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 2.2;
+    position: relative;
+}
+
+.app__project-gallery .images-container-wrapper .images-container .loading-images {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--white);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.app__project-gallery .images-container-wrapper .images-container .loading-images.active {
+    opacity: 1;
+    visibility: visible;
+    animation: loading 2s linear infinite;
+}
+
+.app__project-gallery .images-container-wrapper .images-container .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(0);
+}
+
+.app__project-gallery .images-container-wrapper .images-container .image.active {
+    transform: scale(1);
+}
+
+.app__project-gallery .images-container-wrapper .images-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .app__project-gallery .app__project-gallery-details {
     position: fixed;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+.app__project-gallery .app__project-gallery-details.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.app__project-gallery .app__project-gallery-details .gallery-details-content {
     height: 100%;
     width: 100%;
     max-width: 600px;
@@ -111,13 +169,35 @@
     transition: .3s;
 }
 
-.app__project-gallery .app__project-gallery-details.active {
+.app__project-gallery .app__project-gallery-details.active .gallery-details-content {
     transform: translateX(0);
+}
+
+.app__project-gallery .gallery-icon {
+    cursor: pointer;
+}
+
+.app__project-gallery button.gallery-icon {
+    transition: .2s;
+}
+
+.app__project-gallery button.gallery-icon:disabled {
+    opacity: .1;
+    cursor: not-allowed;
 }
 
 @media screen and (width <= 600px) {
     .app__portfolio-projects .app__projects-item .project-title {
         bottom: 1rem;
         padding: 0 1rem;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

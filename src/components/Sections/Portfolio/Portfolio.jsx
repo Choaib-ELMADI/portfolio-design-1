@@ -14,7 +14,23 @@ import { projects } from '../../../data';
 const Portfolio = () => {
     const [vueGallery, setVueGallery] = useState(false);
     const [vueDetails, setVueDetails] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [index, setIndex] = useState(0);
+
+    const handleProjectClicked = (project) => {
+        setVueGallery(true);
+        setSelectedProject(project);
+        setLoading(true);
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500);
+    };
+
+    const handleIndex = (index, amount) => {
+        setIndex(index => index += amount);
+    };
 
     useEffect(() => {
         AOS.init();
@@ -38,10 +54,7 @@ const Portfolio = () => {
                             key={ `project-${ i+1 }` } 
                             className='app__projects-item' 
                             data-aos="fade-up"
-                            onClick={ () => {
-                                setVueGallery(true);
-                                setSelectedProject(project.id);
-                            }}
+                            onClick={ () => handleProjectClicked(project) }
                         >
                             <img src={ project.background } alt={ `project-${ i+1 }` } draggable={ false } />
                             <div className='project-title'>
@@ -65,32 +78,68 @@ const Portfolio = () => {
                     }}
                 >
                     <div className='app__project-gallery-left-controls'>
-                        <label onClick={ () => setVueGallery(false) }><IoClose size={ 30 } /></label>
-                        <label><BsChevronLeft size={ 30 } /></label>
+                        <label 
+                            onClick={ () => {
+                                setVueGallery(false);
+                                setLoading(false);
+                            }}
+                            className='gallery-icon'
+                        >
+                            <IoClose size={ 30 } />
+                        </label>
+                        <button 
+                            onClick={ (index) => handleIndex(index, -1) }
+                            className='gallery-icon'
+                            style={{
+                                background: 'transparent',
+                                color: '#e4e4e4',
+                                border: '0',
+                                outline: 'none'
+                            }}
+                            disabled={ index <= 0 }
+                        >
+                            <BsChevronLeft size={ 30 } />
+                        </button>
                         <label />
                     </div>
-                    <div className='images-container'></div>
+                    <div className='images-container-wrapper'>
+                        <div className='images-container'>
+                            <div className={ loading ? 'loading-images active' : 'loading-images'} />
+                            <div className={ loading ? 'image' : 'image active'}>
+                                <img src={ selectedProject.pictures[index] } alt={ `project-details-${ index }` } />
+                            </div>
+                        </div>
+                    </div>
                     <div className='app__project-gallery-right-controls'>
                         <label 
                             onClick={ () => setVueDetails(!vueDetails) }
-                            className='app__gallery-toggle-details'
+                            className='app__gallery-toggle-details gallery-icon'
+                            style={{
+                                zIndex: 999,
+                            }}
                         >
                             <BsInfoCircle size={ 28 } />
                         </label>
-                        <label><BsChevronRight size={ 30 } /></label>
+                        <button 
+                            onClick={ (index) => handleIndex(index, 1) }
+                            className='gallery-icon'
+                            style={{
+                                background: 'transparent',
+                                color: '#e4e4e4',
+                                border: '0',
+                                outline: 'none'
+                            }}
+                            disabled={ index >= selectedProject.pictures.length-1 }
+                        >
+                            <BsChevronRight size={ 30 } />
+                        </button>
                         <label />
                     </div>
                     <div className={ vueDetails ? 'app__project-gallery-details active' : 'app__project-gallery-details' }>
-                        <h1>
-                            Frame Manufacturer
-                        </h1>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the 
-                            1500s, when an unknown printer took a galley of 
-                            type and scrambled it to make a type specimen book.
-                        </p>
+                        <div className='gallery-details-content'>
+                            <h1>{ selectedProject.detailsTitle }</h1>
+                            <p>{ selectedProject.detailsDesc }</p>
+                        </div>
                     </div>
                 </motion.div>
             }

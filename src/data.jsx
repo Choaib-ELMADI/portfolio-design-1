@@ -139,23 +139,31 @@ export const skills = [
 
 export const projects = [
     {
-        id: 'cars',
         background: images.cars2,
         title: 'Immersive Solutions',
+        pictures: [images.cars1, images.cars2, images.cars3, images.cars4],
+        detailsTitle: 'Immersive Solutions',
+        detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        id: 'electro',
         background: images.electro3,
         title: 'Adaptive Generation',
+        pictures: [images.electro1, images.electro2, images.electro3, images.electro4],
+        detailsTitle: 'Adaptive Generation',
+        detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        id: 'ice',
         background: images.ice1,
         title: 'Surface Experience',
+        pictures: [images.ice1, images.ice2, images.ice3, images.ice4],
+        detailsTitle: 'Surface Experience',
+        detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        id: 'nature',
         background: images.nature4,
         title: 'Frame Manifacturer',
+        pictures: [images.nature1, images.nature2, images.nature3, images.nature4],
+        detailsTitle: 'Frame Manifacturer',
+        detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
 ];
