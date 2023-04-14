@@ -4,7 +4,10 @@ import 'aos/dist/aos.css';
 
 import { 
   Cursor, Scroll, Settings, ScrollBars, Menu, LoadingPage, 
-  LeftCard, Introduction, About, Achievements, Services, Experience, Skills, Portfolio,
+
+  LeftCard, Introduction, About, Achievements, 
+  Services, Experience, Skills, Portfolio, Customers,
+
   Canva,
 } from './components';
 import { useStateContext } from './StateContext/StateContext';
@@ -39,6 +42,7 @@ const App = () => {
         <Experience />
         <Skills />
         <Portfolio />
+        <Customers />
       </div>
     </div>
   );

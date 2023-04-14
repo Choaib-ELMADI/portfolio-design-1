@@ -10,6 +10,7 @@ export const StateContext = ({ children }) => {
     const [visible, setVisible] = useState(true);
     const [vueMenu, setVueMenu] = useState(false);
     const [menuColor, setMenuColor] = useState(selectedColor);
+    const [isMobile, setIsMobile] = useState(false);
 
     const scrolling = () => {
       if (window.scrollY > 80) {
@@ -20,6 +21,23 @@ export const StateContext = ({ children }) => {
     }
     useEffect(() => {
         window.addEventListener('scroll', scrolling);
+    }, []);
+
+    
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(width <= 800px)');
+
+        setIsMobile(mediaQuery.matches);
+
+        const handleMediaChange = (e) => {
+        setIsMobile(e.matches);
+        }
+
+        mediaQuery.addEventListener('change', handleMediaChange);
+
+        return () => {
+        mediaQuery.removeEventListener('change', handleMediaChange);
+        };
     }, []);
 
     return (
@@ -35,7 +53,8 @@ export const StateContext = ({ children }) => {
                 vueMenu,
                 setVueMenu,
                 menuColor,
-                setMenuColor
+                setMenuColor,
+                isMobile
             }}
         >
             { children }

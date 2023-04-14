@@ -3,12 +3,31 @@ import { Blurhash } from "react-blurhash";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
+import { useStateContext } from '../../../StateContext/StateContext';
 import { IoClose } from 'react-icons/io5';
 import { BsChevronLeft, BsChevronRight, BsInfoCircle } from 'react-icons/bs';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
 import './Portfolio.css';
 import { projects } from '../../../data';
+const initialLoadingState = [
+    {
+        title: 'image1',
+        loaded: 0,
+    },
+    {
+        title: 'image2',
+        loaded: 0,
+    },
+    {
+        title: 'image3',
+        loaded: 0,
+    },
+    {
+        title: 'image4',
+        loaded: 0,
+    }
+];
 
 
 
@@ -19,6 +38,8 @@ const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [index, setIndex] = useState(0);
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [portfolioLoaded, setPortfolioLoaded] = useState(initialLoadingState);
+    const { isMobile } = useStateContext();
 
     const handleProjectClicked = (project) => {
         setVueGallery(true);
@@ -34,6 +55,13 @@ const Portfolio = () => {
         setIndex(index => index += amount);
     };
 
+    const handlePortfolioLoaded = (t) => {
+        const newState = portfolioLoaded.map(obj => {
+            return (obj.title === t) ? { title: obj.title, loaded: 1 } : obj
+        });
+        setPortfolioLoaded(newState);
+    };
+        
     useEffect(() => {
         AOS.init();
     }, []);
@@ -54,11 +82,23 @@ const Portfolio = () => {
                     projects.map((project, i) => (
                         <div 
                             key={ `project-${ i+1 }` } 
-                            className='app__projects-item' 
-                            data-aos="fade-up"
+                            className='app__projects-item'
                             onClick={ () => handleProjectClicked(project) }
                         >
-                            <img src={ project.background } alt={ `project-${ i+1 }` } draggable={ false } />
+                            <div style={{ display: !portfolioLoaded[i].loaded ? '' : 'none' }}>
+                                <Blurhash 
+                                    width={ !isMobile ? 500 : 320 }
+                                    height={ 228 }
+                                    hash={ project.backgroundHash }
+                                />
+                            </div>
+                            <img 
+                                style={{ display: portfolioLoaded[i].loaded ? '' : 'none' }} 
+                                src={ project.background } 
+                                alt={ `project-${ i }` }
+                                draggable={ false }
+                                onLoad={ () => handlePortfolioLoaded(portfolioLoaded[i].title) }
+                            />
                             <div className='project-title'>
                                 <h2>{ project.title }</h2>
                                 <label><AiOutlineArrowRight size={ 18 } /></label>
