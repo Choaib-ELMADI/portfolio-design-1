@@ -8,6 +8,7 @@ export { default as Skills }       from './Sections/Skills/Skills';
 export { default as Portfolio }    from './Sections/Portfolio/Portfolio';
 export { default as Customers }    from './Sections/Customers/Customers';
 export { default as Testimonials } from './Sections/Testimonials/Testimonials';
+export { default as Contact }      from './Sections/Contact/Contact';
 
 export { default as Cursor }       from './Layers/Cursor/Cursor';
 export { default as Scroll }       from './Layers/Scroll/Scroll';

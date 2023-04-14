@@ -6,7 +6,7 @@ import {
   Cursor, Scroll, Settings, ScrollBars, Menu, LoadingPage, 
 
   LeftCard, Introduction, About, Achievements, 
-  Services, Experience, Skills, Portfolio, Customers, Testimonials, 
+  Services, Experience, Skills, Portfolio, Customers, Testimonials, Contact, 
 
   Canva,
 } from './components';
@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className={ `app ${ selectedColor }` }>
-      {/* <Cursor /> */}
+      <Cursor />
       <Scroll />
       <Settings />
       <ScrollBars />
@@ -44,6 +44,7 @@ const App = () => {
         <Portfolio />
         <Customers />
         <Testimonials />
+        <Contact />
       </div>
     </div>
   );
