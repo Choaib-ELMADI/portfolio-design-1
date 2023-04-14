@@ -114,26 +114,36 @@ export const skills = [
         title: 'HTML/CSS',
         progress: '85%',
         category: 'web',
+        back: '#4267b22d',
+        color: '#4267B2',
     },
     {
         title: 'JavaScript',
         progress: '78%',
         category: 'web',
+        back: '#4267b22d',
+        color: '#4267B2',
     },
     {
         title: 'ReactJs',
         progress: '70%',
         category: 'web',
+        back: '#4267b22d',
+        color: '#4267B2',
     },
     {
         title: 'SolidWorks',
         progress: '75%',
         category: '3d',
+        back: 'rgba(255, 68, 0, .2)',
+        color: 'orangered',
     },
     {
         title: 'Blender',
         progress: '35%',
         category: '3d',
+        back: 'rgba(255, 68, 0, .2)',
+        color: 'orangered',
     },
 ];
 

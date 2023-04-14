@@ -26,7 +26,7 @@ const Skills = () => {
                         <div key={ `skills-${ i+1 }` } className='app__skills-item' data-aos="fade-up">
                             <div className='skill-title'>
                                 <h3>{ skill.title }</h3>
-                                <div className='skill-category'>
+                                <div className='skill-category' style={{ background: skill.back, color: skill.color }}>
                                     { skill.category }
                                 </div>
                             </div>
