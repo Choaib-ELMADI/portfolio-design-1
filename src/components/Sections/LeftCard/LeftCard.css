@@ -10,7 +10,7 @@
 }
 
 .app__leftcard .image-container {
-    width: 100%;
+    width: 90%;
     position: relative;
     transform: perspective(5rem) rotate3d(0, 0.1, 0, .03rad);
     display: grid;

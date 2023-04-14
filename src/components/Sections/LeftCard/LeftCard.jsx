@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import images from '../../../constants/images';
 import { useStateContext } from '../../../StateContext/StateContext';
@@ -8,24 +8,7 @@ import './LeftCardSmall.css';
 
 
 const LeftCard = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const { visible } = useStateContext();
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(width <= 800px)');
-
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaChange = (e) => {
-      setIsMobile(e.matches);
-    }
-
-    mediaQuery.addEventListener('change', handleMediaChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-    };
-  }, []);
+  const { visible, isMobile } = useStateContext();
 
   return (
     <>

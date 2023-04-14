@@ -1,0 +1,31 @@
+.app__customers {
+    min-height: 60vh !important;
+}
+
+.app__customers-container {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1.8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.app__customers-container .app__customer {
+    display: grid;
+    place-items: center;
+}
+
+.app__customers-container .app__customer img {
+    width: 60%;
+    height: 50%;
+    object-fit: contain;
+    opacity: .9;
+}
+
+@media screen and (width <= 600px) {
+    .app__customers-container .app__customer img {
+        width: 80%;
+        height: 60%;
+    }
+}
