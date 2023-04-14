@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Blurhash } from "react-blurhash";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
@@ -17,6 +18,7 @@ const Portfolio = () => {
     const [loading, setLoading] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [index, setIndex] = useState(0);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     const handleProjectClicked = (project) => {
         setVueGallery(true);
@@ -106,7 +108,19 @@ const Portfolio = () => {
                         <div className='images-container'>
                             <div className={ loading ? 'loading-images active' : 'loading-images'} />
                             <div className={ loading ? 'image' : 'image active'}>
-                                <img src={ selectedProject.pictures[index] } alt={ `project-details-${ index }` } />
+                                <div styel={{ display: !imageLoaded ? '' : 'none' }}>
+                                    <Blurhash 
+                                        width='100%'
+                                        height='100%'
+                                        hash={ selectedProject.hashes[index] }
+                                    />
+                                </div>
+                                <img 
+                                    style={{ display: imageLoaded ? '' : 'none' }} 
+                                    src={ selectedProject.pictures[index] } 
+                                    alt={ `project-details-${ index }` }
+                                    onLoad={ () => setImageLoaded(true) }
+                                />
                             </div>
                         </div>
                     </div>
