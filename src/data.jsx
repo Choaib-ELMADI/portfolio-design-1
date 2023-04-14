@@ -157,6 +157,7 @@ export const skills = [
 export const projects = [
     {
         background: images.cars2,
+        backgroundHash: 'L38;ACO@00=Z00IU~qtR00=__457',
         title: 'Immersive Solutions',
         pictures: [images.cars1, images.cars2, images.cars3, images.cars4],
         hashes: [
@@ -170,6 +171,7 @@ export const projects = [
     },
     {
         background: images.electro3,
+        backgroundHash: 'LCFFQt5EV?MzRP-op0%0Rj~UIVbc',
         title: 'Adaptive Generation',
         pictures: [images.electro1, images.electro2, images.electro3, images.electro4],
         hashes: [
@@ -183,6 +185,7 @@ export const projects = [
     },
     {
         background: images.ice1,
+        backgroundHash: 'L2Bf^dQ9?daj00_Ntn%N00ExD$E0',
         title: 'Surface Experience',
         pictures: [images.ice1, images.ice2, images.ice3, images.ice4],
         hashes: [
@@ -196,6 +199,7 @@ export const projects = [
     },
     {
         background: images.nature4,
+        backgroundHash: 'L]MX-#-mW.oe}=g1WCoKSgNIaMjG',
         title: 'Frame Manifacturer',
         pictures: [images.nature1, images.nature2, images.nature3, images.nature4],
         hashes: [
@@ -206,5 +210,44 @@ export const projects = [
         ],
         detailsTitle: 'Frame Manifacturer',
         detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
+    },
+];
+
+export const customers = [
+    {
+        name: 'company__1',
+        logo: images.image1,
+    },
+    {
+        name: 'company__2',
+        logo: images.image2,
+    },
+    {
+        name: 'company__3',
+        logo: images.image3,
+    },
+    {
+        name: 'company__4',
+        logo: images.image4,
+    },
+    {
+        name: 'company__5',
+        logo: images.image5,
+    },
+    {
+        name: 'company__6',
+        logo: images.image6,
+    },
+    {
+        name: 'company__7',
+        logo: images.image7,
+    },
+    {
+        name: 'company__8',
+        logo: images.image8,
+    },
+    {
+        name: 'company__9',
+        logo: images.image9,
     },
 ];

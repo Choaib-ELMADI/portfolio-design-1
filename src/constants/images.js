@@ -3,10 +3,13 @@ import banner   from '../assets/banner.jpg';
 
 import image1   from '../assets/1.png';
 import image2   from '../assets/2.png';
+import image3   from '../assets/3.png';
 import image4   from '../assets/4.png';
 import image5   from '../assets/5.png';
+import image6   from '../assets/6.png';
 import image7   from '../assets/7.png';
 import image8   from '../assets/8.png';
+import image9   from '../assets/9.png';
 
 import cars1    from '../assets/cars1.jpg';
 import cars2    from '../assets/cars2.jpg';
@@ -34,10 +37,13 @@ const images = {
 
     image1,    
     image2,    
+    image3,    
     image4,    
     image5,    
+    image6,    
     image7,    
     image8,
+    image9,
     
     cars1,
     cars2,
