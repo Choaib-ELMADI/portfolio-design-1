@@ -114,21 +114,21 @@ export const skills = [
         title: 'HTML/CSS',
         progress: '85%',
         category: 'web',
-        back: '#4267b22d',
+        back: 'rgba(66, 103, 178, .2)',
         color: '#4267B2',
     },
     {
         title: 'JavaScript',
         progress: '78%',
         category: 'web',
-        back: '#4267b22d',
+        back: 'rgba(66, 103, 178, .2)',
         color: '#4267B2',
     },
     {
         title: 'ReactJs',
         progress: '70%',
         category: 'web',
-        back: '#4267b22d',
+        back: 'rgba(66, 103, 178, .2)',
         color: '#4267B2',
     },
     {
@@ -145,6 +145,13 @@ export const skills = [
         back: 'rgba(255, 68, 0, .2)',
         color: 'orangered',
     },
+    {
+        title: 'Arduino',
+        progress: '66%',
+        category: 'Electronics',
+        back: 'rgba(0, 128, 0, .2)',
+        color: 'green',
+    }
 ];
 
 export const projects = [
