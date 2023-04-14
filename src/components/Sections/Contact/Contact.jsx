@@ -121,11 +121,16 @@ const Contact = () => {
                             data-aos="fade-up"
                             onPointerEnter={ () => setColor(selectedColor) }
                             onPointerLeave={ () => setColor('#e4e4e4') }
-                            style={{ color, transition: '.2s' }}
+                            style={{ color, transition: '.2s', borderBottom: `2px solid ${ selectedColor }` }}
                         >
                             Send
                         </button>
-                        <p className='note'><span style={{ color: selectedColor }}>*</span> Marked fields are required to fill.</p>
+                        <p className='note'>
+                            <span style={{ color: selectedColor }}>* </span>
+                            Marked fields are 
+                            <span style={{ color: selectedColor }}> required </span>
+                            to fill.
+                        </p>
                     </div>
 
                 </form>

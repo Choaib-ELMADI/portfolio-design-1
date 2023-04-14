@@ -66,7 +66,8 @@ form .submitting {
     align-items: center;
 }
 
-form .submitting p {
+form .submitting p,
+form .submitting p span {
     font-size: var(--smallText);
     font-family: var(--font__3);
     color: var(--white__3);
