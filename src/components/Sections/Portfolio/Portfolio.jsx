@@ -10,25 +10,46 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 import './Portfolio.css';
 import { projects } from '../../../data';
-const initialLoadingState = [
-    {
-        title: 'image1',
-        loaded: 0,
-    },
-    {
-        title: 'image2',
-        loaded: 0,
-    },
-    {
-        title: 'image3',
-        loaded: 0,
-    },
-    {
-        title: 'image4',
-        loaded: 0,
-    }
-];
 
+
+
+const LazyImage = ({ project }) => {
+    const { background, backgroundHash } = project;
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const { isMobile } = useStateContext();
+
+    useEffect(() => {
+        const img = new Image();
+        img.onload = () => {
+            setImageLoaded(true);
+        };
+        img.src = background;
+    }, [background]);
+    
+
+    return (
+        <>
+            <div style={{ display: !imageLoaded ? 'inline' : 'none' }}>
+                <Blurhash 
+                    width={ isMobile ? 340 : 500 }
+                    height={ 228 }
+                    hash={ backgroundHash }
+                    resolutionX={ 32 }
+                    resolutionY={ 32 }
+                    punch={ 1 }
+                />
+            </div>
+            <img 
+                style={{ display: imageLoaded ? 'inline' : 'none' }}
+                src={ background } 
+                alt="project"
+                draggable={ false }
+                onLoad={ () => setImageLoaded(true) }
+                loading='lazy'
+            />
+        </>
+    );
+};
 
 
 const Portfolio = () => {
@@ -38,8 +59,6 @@ const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [index, setIndex] = useState(0);
     const [imageLoaded, setImageLoaded] = useState(false);
-    const [portfolioLoaded, setPortfolioLoaded] = useState(initialLoadingState);
-    const { isMobile } = useStateContext();
 
     const handleProjectClicked = (project) => {
         setVueGallery(true);
@@ -53,13 +72,6 @@ const Portfolio = () => {
 
     const handleIndex = (index, amount) => {
         setIndex(index => index += amount);
-    };
-
-    const handlePortfolioLoaded = (t) => {
-        const newState = portfolioLoaded.map(obj => {
-            return (obj.title === t) ? { title: obj.title, loaded: 1 } : obj
-        });
-        setPortfolioLoaded(newState);
     };
         
     useEffect(() => {
@@ -85,20 +97,7 @@ const Portfolio = () => {
                             className='app__projects-item'
                             onClick={ () => handleProjectClicked(project) }
                         >
-                            <div style={{ display: !portfolioLoaded[i].loaded ? '' : 'none' }}>
-                                <Blurhash 
-                                    width={ !isMobile ? 500 : 320 }
-                                    height={ 228 }
-                                    hash={ project.backgroundHash }
-                                />
-                            </div>
-                            <img 
-                                style={{ display: portfolioLoaded[i].loaded ? '' : 'none' }} 
-                                src={ project.background } 
-                                alt={ `project-${ i }` }
-                                draggable={ false }
-                                onLoad={ () => handlePortfolioLoaded(portfolioLoaded[i].title) }
-                            />
+                            <LazyImage project={ project } />
                             <div className='project-title'>
                                 <h2>{ project.title }</h2>
                                 <label><AiOutlineArrowRight size={ 18 } /></label>
@@ -148,7 +147,7 @@ const Portfolio = () => {
                         <div className='images-container'>
                             <div className={ loading ? 'loading-images active' : 'loading-images'} />
                             <div className={ loading ? 'image' : 'image active'}>
-                                <div style={{ display: !imageLoaded ? '' : 'none' }}>
+                                <div style={{ display: !imageLoaded ? 'inline' : 'none' }}>
                                     <Blurhash 
                                         width={ 700 }
                                         height={ 320 }
@@ -156,7 +155,7 @@ const Portfolio = () => {
                                     />
                                 </div>
                                 <img 
-                                    style={{ display: imageLoaded ? '' : 'none' }} 
+                                    style={{ display: imageLoaded ? 'inline' : 'none' }} 
                                     src={ selectedProject.pictures[index] } 
                                     alt={ `project-details-${ index }` }
                                     onLoad={ () => setImageLoaded(true) }
@@ -168,9 +167,7 @@ const Portfolio = () => {
                         <label 
                             onClick={ () => setVueDetails(!vueDetails) }
                             className='app__gallery-toggle-details gallery-icon'
-                            style={{
-                                zIndex: 999,
-                            }}
+                            style={{ zIndex: 999 }}
                         >
                             <BsInfoCircle size={ 28 } />
                         </label>
