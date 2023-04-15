@@ -68,7 +68,7 @@
 }
 
 
-@media screen and (width <= 900px) {
+@media screen and (width <= 850px) {
     .app {
         flex-direction: column;
         padding: 0 2rem;
