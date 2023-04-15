@@ -11,6 +11,7 @@ import { useStateContext } from '../../../StateContext/StateContext';
 
 const Contact = () => {
     const formRef = useRef();
+    const contactRef = useRef();
     const [form, setForm] = useState(
         {
             name: '',
@@ -61,12 +62,30 @@ const Contact = () => {
         })
     };
 
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         const entry = entries[0];
+    //         setIsSectionVisible(entry.isIntersecting);
+    //         console.log('contact entry.isIntersecting ==> ', entry.isIntersecting);
+    //         console.log('contact isSectionVisible ==> ', isSectionVisible);
+    //         // console.log('contact', isSectionVisible);
+    //         // if (isSectionVisible) setVisibleSection('contact');
+    //         // else setVisibleSection(null);
+    //         // console.log(visibleSection);
+    //     });
+    //     observer.observe(contactRef.current);
+    // }, []);
+
     useEffect(() => {
         AOS.init();
     }, []);
 
     return (
-        <div className='app__contact app__section' id='contact'>
+        <div 
+            className='app__contact app__section' 
+            id='contact'
+            ref={ contactRef }
+        >
             <h3 data-aos="fade-up">Contact</h3>
             <p className='first' data-aos="fade-up">
                 Let's get in touch.
