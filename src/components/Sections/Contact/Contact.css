@@ -25,6 +25,13 @@
     font-weight: 400;
 }
 
+.form-container .sent h1 {
+    font-family: var(--font__3);
+    font-size: var(--largeText);
+    font-weight: 400;
+    cursor: pointer;
+}
+
 form {
     display: flex;
     flex-direction: column;

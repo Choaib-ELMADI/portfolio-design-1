@@ -136,8 +136,7 @@ const Contact = () => {
                     ></textarea>
                     <div className='submitting'>
                         <button 
-                            type='submit' 
-                            data-aos="fade-up"
+                            type='submit'
                             onPointerEnter={ () => setColor(selectedColor) }
                             onPointerLeave={ () => setColor('#e4e4e4') }
                             style={{ color, transition: '.2s', borderBottom: `2px solid ${ selectedColor }` }}
@@ -158,6 +157,7 @@ const Contact = () => {
                     <div className='sent'>
                         <h2>Your Message has been sent!</h2>
                         <FcCheckmark size={ 60 } />
+                        <h1 onClick={ () => setSent(false) }>Ok</h1>
                     </div>
                 }
             </div>
