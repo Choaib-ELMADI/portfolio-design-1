@@ -109,16 +109,54 @@ const LeftCard = () => {
                 <span />
               </div>
             </div>
-            </div>
+          </div>
         </div> : 
-        <div className={ visible ? 'app__leftcard-small' : 'app__leftcard-small skew' }>
-          <div className="profile">
+        <div 
+          className={ visible ? 'app__leftcard-small' : 'app__leftcard-small skew' }
+          style={{ zIndex: visible ? 1 : -1 }}
+        >
+          <svg style={{ display: 'none' }}>
+            <defs>
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency={ effect?.feTurbulence?.baseFrequency }
+                  type={ effect?.feTurbulence?.type }
+                  numOctaves={ effect?.feTurbulence?.numOctaves }
+                  seed="0"
+                  result="static"   
+                >
+                  <animate
+                    animate= { effect?.animate?.values }
+                    attributeName="seed"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="profile.mouseenter"  
+                  />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                  <animate
+                    attributeName="scale"
+                    values="0;40;0"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="profile.mouseenter"                           
+                  />
+                </feDisplacementMap>
+              </filter>  
+            </defs>
+          </svg>
+
+          <div 
+            className="profile" 
+            id='profile' 
+            style={{ pointerEvents: (effect === "none" || !visible) ? 'none' : '' }}
+          >
               <img src={ images.profile } draggable={ false } alt="Choaib-ELMADI" />
               <div className='title'>
                 <h1>Choaib ELMADI</h1>
                 <span />
               </div>
-            </div>
+          </div>
         </div>
       }
     </>

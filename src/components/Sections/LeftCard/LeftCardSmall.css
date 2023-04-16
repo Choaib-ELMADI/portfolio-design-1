@@ -11,7 +11,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
 }
 
 .app__leftcard-small.skew .profile {
@@ -28,6 +27,10 @@
     object-fit: cover;
 }
 
+.app__leftcard-small .profile:hover img {
+    animation: imagePulse 800ms ease-in-out;
+    filter: url(#noise);
+}
 
 .app__leftcard-small .profile .title {
     width: max-content;
