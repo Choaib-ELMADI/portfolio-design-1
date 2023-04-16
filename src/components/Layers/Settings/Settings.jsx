@@ -7,7 +7,7 @@ import { useStateContext } from '../../../StateContext/StateContext';
 import './Settings.css';
 const colors = ["yellow", "blue", "red", "orange", "lightseagreen", "white", "greenyellow", "green"];
 const scrollBars = ["none", "indicator", "top bar", "right bar"];
-const hoverEffects = ["tech", "abstract", "bricks", "waves"];
+const hoverEffects = ["none", "glitch 1", "noise", "glitch 2"];
 
 
 

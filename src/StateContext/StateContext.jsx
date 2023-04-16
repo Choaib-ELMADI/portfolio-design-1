@@ -6,7 +6,7 @@ const Context = createContext();
 export const StateContext = ({ children }) => {
     const [selectedColor, setSelectedColor] = useState("yellow");
     const [selectedBar, setSelectedBar] = useState("none");
-    const [selectedEffect, setSelectedEffect] = useState("tech");
+    const [selectedEffect, setSelectedEffect] = useState("none");
     const [visible, setVisible] = useState(true);
     const [vueMenu, setVueMenu] = useState(false);
     const [menuColor, setMenuColor] = useState(selectedColor);
@@ -23,7 +23,6 @@ export const StateContext = ({ children }) => {
         window.addEventListener('scroll', scrolling);
     }, []);
 
-    
     useEffect(() => {
         const mediaQuery = window.matchMedia('(width <= 850px)');
 
@@ -45,15 +44,21 @@ export const StateContext = ({ children }) => {
             value={{
                 selectedColor,
                 setSelectedColor,
+
                 selectedBar,
                 setSelectedBar,
+
                 selectedEffect,
                 setSelectedEffect,
+
                 visible,
+
                 vueMenu,
                 setVueMenu,
+
                 menuColor,
                 setMenuColor,
+                
                 isMobile
             }}
         >
