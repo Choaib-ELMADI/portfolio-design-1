@@ -29,7 +29,7 @@ const LazyImage = ({ project }) => {
 
     return (
         <>
-            <div style={{ display: !imageLoaded ? 'inline' : 'none' }}>
+            <div style={{ display: !0 ? 'inline' : 'none' }}>
                 <Blurhash 
                     width={ isMobile ? 340 : 500 }
                     height={ 228 }
@@ -40,7 +40,7 @@ const LazyImage = ({ project }) => {
                 />
             </div>
             <img 
-                style={{ display: imageLoaded ? 'inline' : 'none' }}
+                style={{ display: 0 ? 'inline' : 'none' }}
                 src={ background } 
                 alt="project"
                 draggable={ false }
@@ -147,7 +147,7 @@ const Portfolio = () => {
                         <div className='images-container'>
                             <div className={ loading ? 'loading-images active' : 'loading-images'} />
                             <div className={ loading ? 'image' : 'image active'}>
-                                <div style={{ display: !imageLoaded ? 'inline' : 'none' }}>
+                                <div style={{ display: !0 ? 'inline' : 'none' }}>
                                     <Blurhash 
                                         width={ 700 }
                                         height={ 320 }
@@ -155,7 +155,7 @@ const Portfolio = () => {
                                     />
                                 </div>
                                 <img 
-                                    style={{ display: imageLoaded ? 'inline' : 'none' }} 
+                                    style={{ display: 0 ? 'inline' : 'none' }} 
                                     src={ selectedProject.pictures[index] } 
                                     alt={ `project-details-${ index }` }
                                     onLoad={ () => setImageLoaded(true) }
