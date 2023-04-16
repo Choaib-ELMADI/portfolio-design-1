@@ -40,7 +40,7 @@ const glitchEffect2 = {
 
 const LeftCard = () => {
   const [effect, setEffect] = useState("none");
-  const { visible, isMobile, selectedEffect } = useStateContext();
+  const { selectedColor, visible, isMobile, selectedEffect } = useStateContext();
 
   useEffect(() => {
     switch (selectedEffect) {
@@ -153,8 +153,8 @@ const LeftCard = () => {
           >
               <img src={ images.profile } draggable={ false } alt="Choaib-ELMADI" />
               <div className='title'>
-                <h1>Choaib ELMADI</h1>
-                <span />
+                <h1 >Choaib ELMADI</h1>
+                <span style={{ background: selectedColor }} />
               </div>
           </div>
         </div>

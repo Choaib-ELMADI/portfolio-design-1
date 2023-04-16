@@ -6,14 +6,14 @@ import { useStateContext } from '../../../StateContext/StateContext';
 
 
 const Scroll = () => {
-    const { visible } = useStateContext();
+    const { visible, selectedColor } = useStateContext();
 
     return (
         <div className={ visible ? 'app__scroll' : 'app__scroll hidden'}>
             <div className='bar'>
-                <div className='progress'></div>
+                <div className='progress' style={{ background: selectedColor }}></div>
             </div>
-            <h5>scroll</h5>
+            <h5 style={{ color: selectedColor }}>scroll</h5>
         </div>
     );
 };
