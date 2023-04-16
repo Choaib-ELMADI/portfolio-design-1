@@ -24,7 +24,7 @@ export const StateContext = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(width <= 850px)');
+        const mediaQuery = window.matchMedia('(width <= 750px)');
 
         setIsMobile(mediaQuery.matches);
 

@@ -43,7 +43,7 @@
     font-weight: 200;
 }
 
-@media screen and (width <= 850px) {
+@media screen and (width <= 750px) {
     .app__section .first {
         margin-left: .75rem;
     }

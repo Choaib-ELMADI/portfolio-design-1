@@ -62,7 +62,7 @@
     }
 }
 
-@media screen and (width <= 800px) {
+@media screen and (width <= 750px) {
     .app__cursor {
         display: none;
     }

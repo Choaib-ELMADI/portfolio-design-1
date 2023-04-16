@@ -40,9 +40,10 @@
 }
 
 @media screen and (width <= 575px) {
-    .app__intro p {
+    .app__intro p,
+    .app__intro p span {
         margin-left: .5rem;
-        font-size: 65px;
+        font-size: 62px;
         line-height: 65px;
     }
 }
