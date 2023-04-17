@@ -11,7 +11,7 @@ const Introduction = () => {
     <div className='app__intro' id='home'>
       <h3>Introduction</h3>
       <p>
-        I'm a<span style={{ color: selectedColor }}> Creative Developer</span> & <span style={{ color: selectedColor }}>Technology Passionate</span>
+        I'm a<span style={{ color: selectedColor }}> Creative </span>Developer & Technology<span style={{ color: selectedColor }}> Passionate</span>.
       </p>
       <div className='bar' />
     </div>
