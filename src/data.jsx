@@ -11,7 +11,7 @@ export const services = [
     },
     {
         title: 'Arduino',
-        desc: 'Raspberry PI - Uno R3 - Nano - Mega - Electronics - Embedded Systems - Microcontrollers',
+        desc: 'Raspberry PI - Uno R3 - Nano - Mega - Electronics - Embedded Systems - Microcontrollers - Soldering',
     },
     {
         title: '3D Modeling',

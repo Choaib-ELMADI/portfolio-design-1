@@ -17,7 +17,7 @@ import './AppSection.css';
 
 
 const App = () => {
-  const { selectedColor } = useStateContext("yellow");
+  const { selectedColor } = useStateContext("orange");
   useEffect(() => {
     AOS.init();
   }, []);

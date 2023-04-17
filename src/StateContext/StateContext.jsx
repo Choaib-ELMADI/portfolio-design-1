@@ -4,7 +4,7 @@ const Context = createContext();
 
 
 export const StateContext = ({ children }) => {
-    const [selectedColor, setSelectedColor] = useState("yellow");
+    const [selectedColor, setSelectedColor] = useState("orange");
     const [selectedBar, setSelectedBar] = useState("none");
     const [selectedEffect, setSelectedEffect] = useState("none");
     const [visible, setVisible] = useState(true);
