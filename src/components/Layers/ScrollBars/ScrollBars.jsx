@@ -55,7 +55,8 @@ const ScrollBars = () => {
         const handleScroll = () => {
             const pageHeight = document.body.scrollHeight;
             const scrollPosi = window.scrollY;
-            const progress   = (((scrollPosi * 2) / pageHeight) * 100).toFixed(2);
+            const windHeight = window.innerHeight;
+            const progress   = (scrollPosi / (pageHeight - windHeight)) * 100;
             setHeight(progress);
         };
 
