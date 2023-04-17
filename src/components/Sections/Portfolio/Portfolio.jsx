@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Blurhash } from "react-blurhash";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
-import { useStateContext } from '../../../StateContext/StateContext';
 import { IoClose } from 'react-icons/io5';
 import { BsChevronLeft, BsChevronRight, BsInfoCircle } from 'react-icons/bs';
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -13,52 +13,12 @@ import { projects } from '../../../data';
 
 
 
-const LazyImage = ({ project }) => {
-    const { background, backgroundHash } = project;
-    const [imageLoaded, setImageLoaded] = useState(false);
-    const { isMobile } = useStateContext();
-
-    useEffect(() => {
-        const img = new Image();
-        img.onload = () => {
-            setImageLoaded(true);
-        };
-        img.src = background;
-    }, [background]);
-    
-
-    return (
-        <>
-            <div style={{ display: !0 ? 'inline' : 'none' }}>
-                <Blurhash 
-                    width={ isMobile ? 340 : 500 }
-                    height={ 228 }
-                    hash={ backgroundHash }
-                    resolutionX={ 32 }
-                    resolutionY={ 32 }
-                    punch={ 1 }
-                />
-            </div>
-            <img 
-                style={{ display: 0 ? 'inline' : 'none' }}
-                src={ background } 
-                alt="project"
-                draggable={ false }
-                onLoad={ () => setImageLoaded(true) }
-                loading='lazy'
-            />
-        </>
-    );
-};
-
-
 const Portfolio = () => {
     const [vueGallery, setVueGallery] = useState(false);
     const [vueDetails, setVueDetails] = useState(false);
     const [loading, setLoading] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [index, setIndex] = useState(0);
-    const [imageLoaded, setImageLoaded] = useState(false);
 
     const handleProjectClicked = (project) => {
         setVueGallery(true);
@@ -95,9 +55,16 @@ const Portfolio = () => {
                         <div 
                             key={ `project-${ i+1 }` } 
                             className='app__projects-item'
+                            data-aos="fade-up"
                             onClick={ () => handleProjectClicked(project) }
                         >
-                            <LazyImage project={ project } />
+                            <LazyLoadImage
+                                src={ project.background } 
+                                effect="blur"
+                                alt={ `project-${ i+1 }` }
+                                key={ `portf-project-${ i+1 }` }
+                                placeholderSrc={ project.background }
+                            />
                             <div className='project-title'>
                                 <h2>{ project.title }</h2>
                                 <label><AiOutlineArrowRight size={ 18 } /></label>
@@ -147,18 +114,12 @@ const Portfolio = () => {
                         <div className='images-container'>
                             <div className={ loading ? 'loading-images active' : 'loading-images'} />
                             <div className={ loading ? 'image' : 'image active'}>
-                                <div style={{ display: !0 ? 'inline' : 'none' }}>
-                                    <Blurhash 
-                                        width={ 700 }
-                                        height={ 320 }
-                                        hash={ selectedProject.hashes[index] }
-                                    />
-                                </div>
-                                <img 
-                                    style={{ display: 0 ? 'inline' : 'none' }} 
+                                <LazyLoadImage
                                     src={ selectedProject.pictures[index] } 
-                                    alt={ `project-details-${ index }` }
-                                    onLoad={ () => setImageLoaded(true) }
+                                    effect="blur"
+                                    alt={ `selected-project-${ index }`}
+                                    key={ `selected-project-${ index }`}
+                                    placeholderSrc={ selectedProject.pictures[index] }
                                 />
                             </div>
                         </div>
