@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Preload, useGLTF, OrbitControls } from '@react-three/drei';
+import { Preload, useGLTF } from '@react-three/drei';
 
 import Loader from '../Loader/Loader';
 import { useStateContext } from '../../../StateContext/StateContext';
@@ -21,9 +21,6 @@ const Model = () => {
         scale={ .04 }
         position={ isMobile ? [9, -2, 0] : [12, -1, 0] }
       />
-      {/* <OrbitControls 
-        enableZoom={ false }
-      /> */}
     </mesh>
   );
 };
