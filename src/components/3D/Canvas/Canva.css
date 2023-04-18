@@ -4,5 +4,6 @@
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: .5;
+    opacity: .3;
+    z-index: 11;
 }

@@ -1,23 +1,29 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Preload, useGLTF } from '@react-three/drei';
+import { Preload, useGLTF, OrbitControls } from '@react-three/drei';
 
 import Loader from '../Loader/Loader';
+import { useStateContext } from '../../../StateContext/StateContext';
 import './Canva.css';
+
+
 
 const Model = () => {
   const model = useGLTF('./model/scene.gltf');
+  const { isMobile } = useStateContext();
 
   return (
     <mesh>
-      <hemisphereLight intensity={ .2 } groundColor="black" />
+      <hemisphereLight intensity={ .25 } groundColor="black" />
       <pointLight intensity={ 1 } />
       <primitive 
         object={ model.scene }
         scale={ .04 }
-        position={ [12, -2, 0] }
-        rotation={ [.2, 0, 0] }
+        position={ isMobile ? [9, -2, 0] : [12, -1, 0] }
       />
+      {/* <OrbitControls 
+        enableZoom={ false }
+      /> */}
     </mesh>
   );
 };
