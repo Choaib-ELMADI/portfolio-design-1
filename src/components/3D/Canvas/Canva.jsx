@@ -1,6 +1,7 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { Preload, useGLTF } from '@react-three/drei';
+import { useSpring, animated } from '@react-spring/three'
 
 import Loader from '../Loader/Loader';
 import { useStateContext } from '../../../StateContext/StateContext';
@@ -10,10 +11,17 @@ import './Canva.css';
 
 const Model = () => {
   const model = useGLTF('./model/scene.gltf');
+  const ref = useRef()
   const { isMobile } = useStateContext();
 
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8);
+    ref.current.position.y = (0.5 + Math.cos(t / 2)) / 7;
+  });
+
   return (
-    <mesh>
+    <animated.mesh ref={ ref }>
       <hemisphereLight intensity={ .25 } groundColor="black" />
       <pointLight intensity={ 1 } />
       <primitive 
@@ -21,7 +29,7 @@ const Model = () => {
         scale={ .04 }
         position={ isMobile ? [9, -2, 0] : [12, -1, 0] }
       />
-    </mesh>
+    </animated.mesh>
   );
 };
 
