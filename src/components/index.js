@@ -19,4 +19,3 @@ export { default as Menu }         from './Layers/Menu/Menu';
 
 
 export { default as Canva }        from './3D/Canvas/Canva';
-export { default as Loader }       from './3D/Loader/Loader';

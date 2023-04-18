@@ -2,8 +2,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 99;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background: red;
+    opacity: .5;
 }

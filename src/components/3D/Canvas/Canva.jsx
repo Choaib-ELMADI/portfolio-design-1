@@ -1,47 +1,40 @@
 import React, { Suspense } from 'react';
-import { useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { Preload, useGLTF } from '@react-three/drei';
 
-import { Loader } from '../../index';
+import Loader from '../Loader/Loader';
 import './Canva.css';
 
 const Model = () => {
   const model = useGLTF('./model/scene.gltf');
 
   return (
-    <primitive
-      object={ model.scene }
-      scale={ 2.5 }
-      position-y={ 0 }
-      rotation-y={ 0 }
-    />
+    <mesh>
+      <hemisphereLight intensity={ .2 } groundColor="black" />
+      <pointLight intensity={ 1 } />
+      <primitive 
+        object={ model.scene }
+        scale={ .04 }
+        position={ [12, -2, 0] }
+        rotation={ [.2, 0, 0] }
+      />
+    </mesh>
   );
 };
 
 const ModelCanvas = () => {
   return (
     <Canvas
-      shadows
       frameloop='demand'
+      shadows
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      camear={{ 
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [0, 0, 0]
-      }}
     >
       <Suspense fallback={ <Loader /> }>
-        {/* <OrbitControls
-          autoRotate
-          enableZoom={ false }
-          maxPolarAngle={ Math.PI / 2 }
-          minPolarAngle={ Math.PI / 2 }
-        /> */}
         <Model />
       </Suspense>
 
-      {/* <Preload all /> */}
+      <Preload all />
     </Canvas>
   );
 };

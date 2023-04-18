@@ -24,17 +24,17 @@ const App = () => {
 
   return (
     <div className={ `app ${ selectedColor }` }>
-      <Cursor />
+      {/* <Cursor />
       <Scroll />
       <Settings />
       <ScrollBars />
       <LoadingPage />
-      <Menu />
-      {/* <Canva /> */}
+      <Menu /> */}
+      <Canva />
 
-      <LeftCard />
+      {/* <LeftCard /> */}
 
-      <div className='app__main-content'>
+      {/* <div className='app__main-content'>
         <Introduction />
         <About />
         <Achievements />
@@ -45,7 +45,7 @@ const App = () => {
         <Customers />
         <Testimonials />
         <Contact />
-      </div>
+      </div> */}
     </div>
   );
 };
