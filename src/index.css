@@ -4,14 +4,11 @@
 
 :root {
     --main__color: orangered;
-
     --white__1:    #e4e4e425;
     --white__2:    #e4e4e450;
     --white__3:    #e4e4e480;
     --white:       #e4e4e4;
-    
     --gray:        #7c7c7c;
-
     --background:  #212121;
 
     --font__1: 'Teko';
