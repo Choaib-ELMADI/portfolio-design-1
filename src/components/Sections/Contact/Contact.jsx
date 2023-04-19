@@ -134,7 +134,7 @@ const Contact = () => {
                         onChange={ handleChange }
                         required
                     ></textarea>
-                    <div className='submitting'>
+                    <div className='submitting' data-aos="fade-up">
                         <button 
                             type='submit'
                             onPointerEnter={ () => setColor(selectedColor) }
@@ -154,7 +154,7 @@ const Contact = () => {
                 </form>
                 {
                     sent &&
-                    <div className='sent'>
+                    <div className='sent' data-aos="fade-up">
                         <h2>Your Message has been sent!</h2>
                         <FcCheckmark size={ 60 } />
                         <h1 onClick={ () => setSent(false) }>Ok</h1>
