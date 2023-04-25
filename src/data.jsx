@@ -156,10 +156,15 @@ export const skills = [
 
 export const projects = [
     {
-        background: images.cars2,
+        background: 'https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         backgroundHash: 'L38;ACO@00=Z00IU~qtR00=__457',
         title: 'Immersive Solutions',
-        pictures: [images.cars1, images.cars2, images.cars3, images.cars4],
+        pictures: [
+            'https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/1687147/pexels-photo-1687147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ],
         hashes: [
             'L^K203xaf+ae~qs:afj[R+oLaeof', 
             'L38;ACO@00=Z00IU~qtR00=__457', 
@@ -170,10 +175,15 @@ export const projects = [
         detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        background: images.electro3,
+        background: 'https://images.pexels.com/photos/159201/circuit-circuit-board-resistor-computer-159201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         backgroundHash: 'LCFFQt5EV?MzRP-op0%0Rj~UIVbc',
         title: 'Adaptive Generation',
-        pictures: [images.electro1, images.electro2, images.electro3, images.electro4],
+        pictures: [
+            'https://images.pexels.com/photos/132700/pexels-photo-132700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/159220/printed-circuit-board-print-plate-via-macro-159220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/159201/circuit-circuit-board-resistor-computer-159201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/163073/raspberry-pi-computer-linux-163073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ],
         hashes: [
             'LBGbeo.T0LI8%$_4IUEK-U?b8{rY', 
             'L385u^00QUyW00.l.l%fi0x]k;Io', 
@@ -184,10 +194,15 @@ export const projects = [
         detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        background: images.ice1,
+        background: 'https://images.pexels.com/photos/1874850/pexels-photo-1874850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         backgroundHash: 'L2Bf^dQ9?daj00_Ntn%N00ExD$E0',
         title: 'Surface Experience',
-        pictures: [images.ice1, images.ice2, images.ice3, images.ice4],
+        pictures: [
+            'https://images.pexels.com/photos/1874850/pexels-photo-1874850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/1009136/pexels-photo-1009136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            images.ice4
+        ],
         hashes: [
             'L2Bf^dQ9?daj00_Ntn%N00ExD$E0', 
             'LBD^cp00#OIU00xBiaWU_M-q9Fx]', 
@@ -201,7 +216,12 @@ export const projects = [
         background: images.nature4,
         backgroundHash: 'L]MX-#-mW.oe}=g1WCoKSgNIaMjG',
         title: 'Frame Manifacturer',
-        pictures: [images.nature1, images.nature2, images.nature3, images.nature4],
+        pictures: [
+            images.nature1, 
+            images.nature2, 
+            images.nature3, 
+            images.nature4
+        ],
         hashes: [
             'LSBzIGOFR-fS%QS4k9bHOtnhaeWV', 
             'LODbyS^%E1M{~Vt7E2V@ENE3Rkxt', 
