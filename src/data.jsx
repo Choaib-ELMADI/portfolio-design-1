@@ -201,7 +201,7 @@ export const projects = [
             'https://images.pexels.com/photos/1874850/pexels-photo-1874850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
             'https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
             'https://images.pexels.com/photos/1009136/pexels-photo-1009136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
-            images.ice4
+            'https://media.istockphoto.com/id/1136870253/photo/last-light-on-half-dome.jpg?s=612x612&w=0&k=20&c=2H-lpm6c47yWHVTq3ckWb9Z8jzthbaygfZ026rNVxFs='
         ],
         hashes: [
             'L2Bf^dQ9?daj00_Ntn%N00ExD$E0', 
@@ -213,14 +213,14 @@ export const projects = [
         detailsDesc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deserunt itaque iste ipsam necessitatibus animi culpa ut eveniet quos? Rem porro facilis expedita!',
     },
     {
-        background: images.nature4,
+        background: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         backgroundHash: 'L]MX-#-mW.oe}=g1WCoKSgNIaMjG',
         title: 'Frame Manifacturer',
         pictures: [
-            images.nature1, 
-            images.nature2, 
-            images.nature3, 
-            images.nature4
+            'https://images.pexels.com/photos/695196/pexels-photo-695196.jpeg?auto=compress&cs=tinysrgb&w=600', 
+            'https://images.pexels.com/photos/1648350/pexels-photo-1648350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load', 
+            'https://images.pexels.com/photos/1456303/pexels-photo-1456303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+            'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         ],
         hashes: [
             'LSBzIGOFR-fS%QS4k9bHOtnhaeWV', 
