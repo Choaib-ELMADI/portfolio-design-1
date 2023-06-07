@@ -8,7 +8,7 @@ import { useStateContext } from '../../../StateContext/StateContext';
 const Introduction = () => {
   const { selectedColor } = useStateContext();
   return (
-    <div className='app__intro' id='home'>
+    <div className='app__intro app__section section-wrapper' id='home'>
       <h3>Introduction</h3>
       <p>
         I'm a <span 

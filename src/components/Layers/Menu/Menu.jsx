@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { HiBars2 } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
@@ -14,6 +14,27 @@ const Menu = () => {
     const [hoveredItem, setHoveredItem] = useState(null);
     const [activeItem, setActiveItem] = useState('home');
     const [color2, setColor2] = useState("#e4e4e4");
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('.app__section');
+
+        const options = {
+            threshold: 0.3,
+        };
+
+        const callback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveItem(entry.target.id)
+                }
+            })
+        }
+
+        const observer = new IntersectionObserver(callback, options);
+
+        sections.forEach(section => observer.observe(section));
+    }, []);
+    
 
     return (
         <>
@@ -54,7 +75,7 @@ const Menu = () => {
                                 }}
                                 style={{ 
                                     color: activeItem === item.id ? menuColor : '', 
-                                    transition: '.3s',
+                                    transition: '.1s',
                                 }}
                                 animate={ vueMenu ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 } }
                                 transition={{ 

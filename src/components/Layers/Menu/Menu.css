@@ -102,9 +102,3 @@
 .app__menu-social a label {
     cursor: pointer;
 }
-
-/* @media screen and (orientation: landscape) {
-    .app__menu {
-        justify-content: flex-start;
-    }
-} */

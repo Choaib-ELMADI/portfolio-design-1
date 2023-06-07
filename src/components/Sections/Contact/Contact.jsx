@@ -11,7 +11,6 @@ import { useStateContext } from '../../../StateContext/StateContext';
 
 const Contact = () => {
     const formRef = useRef();
-    const contactRef = useRef();
     const [form, setForm] = useState(
         {
             name: '',
@@ -31,11 +30,11 @@ const Contact = () => {
             'service_rbyqrrj', 
             'template_z4t83ye',
             {
-              from_name: form.name,
-              to_name: 'Choaib ELMADI',
-              from_email: form.email,
-              to_email: 'choaib1996elmadi@gmail.com',
-              message: form.message,
+                from_name: form.name,
+                to_name: 'Choaib ELMADI',
+                from_email: form.email,
+                to_email: 'choaib1996elmadi@gmail.com',
+                message: form.message,
             },
             'BzsAxBDR2VcTFgclc',
         ).then(() => {
@@ -43,10 +42,10 @@ const Contact = () => {
             alert("Thank You! I will get back to you as soon as possible.");
             setSent(true);
             setForm({
-              name: '',
-              email: '',
-              number: '',
-              message: '',
+                name: '',
+                email: '',
+                number: '',
+                message: '',
             });
         }, (error) => {
             console.log(error);
@@ -62,29 +61,14 @@ const Contact = () => {
         })
     };
 
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver((entries) => {
-    //         const entry = entries[0];
-    //         setIsSectionVisible(entry.isIntersecting);
-    //         console.log('contact entry.isIntersecting ==> ', entry.isIntersecting);
-    //         console.log('contact isSectionVisible ==> ', isSectionVisible);
-    //         // console.log('contact', isSectionVisible);
-    //         // if (isSectionVisible) setVisibleSection('contact');
-    //         // else setVisibleSection(null);
-    //         // console.log(visibleSection);
-    //     });
-    //     observer.observe(contactRef.current);
-    // }, []);
-
     useEffect(() => {
         AOS.init();
     }, []);
 
     return (
         <div 
-            className='app__contact app__section' 
+            className='app__contact app__section section-wrapper' 
             id='contact'
-            ref={ contactRef }
         >
             <h3 data-aos="fade-up">Contact</h3>
             <p className='first' data-aos="fade-up">

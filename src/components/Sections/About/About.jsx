@@ -1,28 +1,14 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 
 import './About.css';
 
 
 
 const About = () => {
-    const [visibleSection, setVisibleSection] = useState('not about');
-    const aboutRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            if (entry.isIntersecting) setVisibleSection('about');
-            else setVisibleSection('not about');
-            console.log(visibleSection);
-        });
-        observer.observe(aboutRef.current);
-    }, [visibleSection]);
-
     return (
         <div 
-            className='app__about app__section' 
+            className='app__about app__section section-wrapper' 
             id='about'
-            ref={ aboutRef }
         >
             <h3 data-aos="fade-up">About</h3>
             <p className='first' data-aos="fade-up">
